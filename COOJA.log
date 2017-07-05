@@ -1,47 +1,173 @@
-[17:28:23 - main] [Cooja.java:1314] [INFO] - > Starting Cooja
-[17:28:23 - main] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux.config
-[17:28:23 - main] [Cooja.java:2885] [INFO] - External tools user settings: /home/user/.cooja.user.properties
-[17:28:23 - main] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[17:28:24 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:28:24 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:28:24 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:28:24 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:28:24 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:28:24 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:28:24 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:28:24 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:28:24 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:28:24 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:28:24 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:28:24 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:28:24 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:28:24 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:28:24 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:28:24 - main] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
-[17:28:24 - main] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
-[17:28:43 - Thread-0] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1499095723958
-[17:29:16 - Thread-0] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1499095756114	Duration: 32156 ms	Simulated time 65163 ms	Ratio 2.026464734419704
-[17:46:50 - Thread-1] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1499096810177
-[17:47:30 - Thread-1] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1499096850793	Duration: 40616 ms	Simulated time 189978 ms	Ratio 4.677417766397479
-[17:48:31 - Thread-2] [Simulation.java:421] [INFO] - Simulation random seed: 123456
-[17:48:31 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:48:31 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:48:31 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:48:31 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:48:31 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:48:31 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:48:31 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:48:31 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:48:31 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:48:31 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:48:31 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:48:31 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:48:31 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:48:31 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:48:31 - Thread-2] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Desktop/lab5-8/build/telosb/main.exe
-[17:48:32 - Thread-2] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
-[17:48:33 - Thread-3] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1499096913528
-[17:49:25 - Thread-3] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1499096965026	Duration: 51498 ms	Simulated time 130854 ms	Ratio 2.540953046720261
-[17:57:57 - Thread-4] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1499097477860
-[17:58:00 - Thread-4] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1499097480453	Duration: 2593 ms	Simulated time 135237 ms	Ratio 52.154647126880064
-[19:53:26 - AWT-EventQueue-0] [Cooja.java:2637] [INFO] - Save command cancelled by user...
+[17:56:56 - main] [Cooja.java:1314] [INFO] - > Starting Cooja
+[17:56:56 - main] [Cooja.java:2855] [INFO] - External tools default settings: /external_tools_linux.config
+[17:56:56 - main] [Cooja.java:2885] [INFO] - External tools user settings: /home/user/.cooja.user.properties
+[17:56:57 - main] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[17:56:57 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:56:57 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:56:57 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:56:57 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:56:57 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:56:57 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:56:57 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:56:57 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:56:57 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:56:57 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:56:57 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:56:57 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:56:57 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:56:57 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:56:57 - main] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:56:57 - main] [Visualizer.java:256] [INFO] - Registered external visualizer: org.contikios.cooja.plugins.skins.DGRMVisualizerSkin
+[17:56:58 - main] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
+[17:57:01 - Thread-0] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1499270221275
+[17:57:43 - Thread-0] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1499270263664	Duration: 42390 ms	Simulated time 3137131 ms	Ratio 74.00639301722104
+[17:58:28 - Thread-1] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[17:58:28 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:58:28 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:58:28 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:58:28 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:58:28 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:58:28 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:58:28 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:58:28 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:58:28 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:58:28 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:58:28 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:58:28 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:58:28 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:58:28 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:58:28 - Thread-1] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[17:58:28 - Thread-1] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
+[17:58:30 - Thread-2] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1499270310529
+[17:59:48 - Thread-2] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1499270388500	Duration: 77971 ms	Simulated time 5980131 ms	Ratio 76.69686165369176
+[18:08:37 - Thread-3] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:08:37 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:08:37 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:08:37 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:08:37 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:08:37 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:08:37 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:08:37 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:08:37 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:08:37 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:08:37 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:08:37 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:08:37 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:08:37 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:08:37 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:08:37 - Thread-3] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:08:37 - Thread-3] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
+[18:08:38 - Thread-4] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1499270918514
+[18:09:07 - Thread-4] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1499270947027	Duration: 28513 ms	Simulated time 1879348 ms	Ratio 65.91196997860625
+[18:44:56 - Thread-5] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:44:56 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:44:56 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:44:57 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:44:57 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:44:57 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:44:57 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:44:57 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:44:57 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:44:57 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:44:57 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:44:57 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:44:57 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:44:57 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:44:57 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:44:57 - Thread-5] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:44:57 - Thread-5] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
+[18:44:58 - Thread-6] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1499273098018
+[18:50:20 - Thread-6] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1499273420545	Duration: 322527 ms	Simulated time 29827847 ms	Ratio 92.48170540760928
+[18:52:14 - Thread-7] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:52:14 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:52:14 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:52:14 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:52:14 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:52:14 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:52:14 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:52:14 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:52:14 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:52:14 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:52:14 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:52:14 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:52:14 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:52:14 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:52:14 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:52:14 - Thread-7] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:52:14 - Thread-7] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
+[18:52:16 - Thread-8] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1499273536976
+[18:52:40 - Thread-8] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1499273560991	Duration: 24015 ms	Simulated time 1560862 ms	Ratio 64.99529460753696
+[18:56:46 - Thread-9] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:56:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:56:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:56:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:56:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:56:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:56:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:56:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:56:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:56:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:56:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:56:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:56:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:56:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:56:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:56:46 - Thread-9] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:56:46 - Thread-9] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
+[18:56:48 - Thread-10] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1499273808678
+[18:57:59 - Thread-10] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1499273879683	Duration: 71005 ms	Simulated time 5955730 ms	Ratio 83.87761425251743
+[18:59:11 - Thread-11] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:59:11 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:11 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:11 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:11 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:11 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:11 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:11 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:11 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:11 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:11 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:11 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:11 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:11 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:11 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:11 - Thread-11] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:11 - Thread-11] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
+[18:59:13 - Thread-12] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1499273953078
+[18:59:28 - Thread-12] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1499273968646	Duration: 15568 ms	Simulated time 733184 ms	Ratio 47.09558067831449
+[18:59:29 - Thread-13] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:59:29 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:29 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:29 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:29 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:29 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:29 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:29 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:29 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:29 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:29 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:29 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:29 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:29 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:29 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:29 - Thread-13] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:30 - Thread-13] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
+[18:59:44 - Thread-14] [Simulation.java:421] [INFO] - Simulation random seed: 123456
+[18:59:44 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:44 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:44 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:44 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:44 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:44 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:44 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:44 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:44 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:44 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:44 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:44 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:44 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:44 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:44 - Thread-14] [MspMote.java:235] [INFO] - Loading firmware from: /home/user/Wireless-Sensor-Network-Project-2017/build/telosb/main.exe
+[18:59:44 - Thread-14] [TimeLine.java:567] [INFO] - Zoom level: 1000.0 microseconds/pixel 
+[18:59:46 - Thread-15] [Simulation.java:252] [INFO] - Simulation main loop started, system time: 1499273986109
+[19:00:05 - Thread-15] [Simulation.java:311] [INFO] - Simulation main loop stopped, system time: 1499274005906	Duration: 19797 ms	Simulated time 1171324 ms	Ratio 59.16674243572258

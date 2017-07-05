@@ -3,7 +3,7 @@
 #include <AM.h>
 #include <printf.h>
 module AppP {
-	uses interface MyCollection;
+	uses interface Routing;
 	uses interface Boot;
 	uses interface Timer<TMilli> as StartTimer;
 	uses interface Timer<TMilli> as PeriodicTimer;
@@ -23,11 +23,11 @@ implementation
 
 	event void StartTimer.fired() {
 		if (TOS_NODE_ID == 1) {
-			call MyCollection.buildTree();
+			call Routing.buildTree();
 		}
 		else {
 			// TODO: uncomment the following to enable sending data
-			call PeriodicTimer.startPeriodic(IMI);
+		//	call PeriodicTimer.startPeriodic(IMI);
 		}
 	}
 
@@ -37,10 +37,10 @@ implementation
 
 	event void JitterTimer.fired() {
 		printf("app:Send to sink seqn %d\n", data.seqn);
-		call MyCollection.send(&data);
+		call Routing.send(&data);
 		data.seqn++;
 	}
-	event void MyCollection.receive(am_addr_t from, MyData* d) {
+	event void Routing.receive(am_addr_t from, MyData* d) {
 		printf("app:Recv from %d seqn %d\n", from, d->seqn);
 	}
 }

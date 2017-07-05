@@ -3,6 +3,7 @@
 
 enum {
   AM_COLLECTIONBEACON = 0x88,
+  AM_SENDTOSOURCEBEACON = 0x89,
   AM_COLLECTIONDATA = 0x99,
 };
 
@@ -11,7 +12,10 @@ typedef nx_struct CollectionBeacon {
   nx_uint8_t seq_no;
   nx_uint16_t metric;
 } CollectionBeacon;
-
+typedef nx_struct InfoBeacon {
+	nx_uint8_t child;
+	nx_uint8_t father;
+} InfoBeacon;
 // application-level data packet
 typedef nx_struct {
 	nx_uint16_t seqn;
@@ -24,5 +28,8 @@ typedef nx_struct {
   MyData data; // includes the app-level data
 } CollectionData;
 
-
+typedef struct RoutingTableStruct{
+	uint8_t childAddress;
+	uint8_t parentAddress;
+} RoutingTableStruct;
 #endif

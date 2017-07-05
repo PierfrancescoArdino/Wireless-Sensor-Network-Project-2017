@@ -1,7 +1,7 @@
 configuration AppC {
 }
 implementation {
-	components MyCollectionC as CollectionC;
+	components RoutingC as CollectionC;
 	//components CtpAdapterC as CollectionC;
 	components AppP;
 	components SerialPrintfC, SerialStartC;
@@ -11,7 +11,7 @@ implementation {
 	components MainC, RandomC;
 
 	AppP.Boot -> MainC;
-	AppP.MyCollection -> CollectionC;
+	AppP.Routing -> CollectionC;
 	AppP.Random -> RandomC;
 	AppP.StartTimer -> StartTimer;
 	AppP.PeriodicTimer -> PeriodicTimer;

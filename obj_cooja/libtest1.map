@@ -1,0 +1,412 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+arr1                0x28              obj_cooja/libtest1.o
+uvar2               0x4               obj_cooja/libtest1.o
+referenceVar        0x4               obj_cooja/libtest1.o
+arr2                0x28              obj_cooja/libtest1.o
+uvar1               0x4               obj_cooja/libtest1.o
+
+Discarded input sections
+
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ .gnu_debuglink
+                0x0000000000000000        0xc /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ .group         0x0000000000000000        0x8 /usr/lib/gcc/i486-linux-gnu/4.7/crtbeginS.o
+ .text.__x86.get_pc_thunk.bx
+                0x0000000000000000        0x4 /usr/lib/gcc/i486-linux-gnu/4.7/crtbeginS.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/crtbeginS.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 obj_cooja/libtest1.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/crtendS.o
+ .note.GNU-stack
+                0x0000000000000000        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crtn.o
+ .gnu_debuglink
+                0x0000000000000000        0xc /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+LOAD /usr/lib/gcc/i486-linux-gnu/4.7/crtbeginS.o
+LOAD obj_cooja/libtest1.o
+LOAD obj_cooja/libtest1.a
+LOAD /usr/lib/gcc/i486-linux-gnu/4.7/libgcc.a
+LOAD /usr/lib/gcc/i486-linux-gnu/4.7/libgcc_s.so
+LOAD /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/libc.so
+START GROUP
+LOAD /lib/i386-linux-gnu/libc.so.6
+LOAD /usr/lib/i386-linux-gnu/libc_nonshared.a
+LOAD /lib/i386-linux-gnu/ld-linux.so.2
+END GROUP
+LOAD /usr/lib/gcc/i486-linux-gnu/4.7/libgcc.a
+LOAD /usr/lib/gcc/i486-linux-gnu/4.7/libgcc_s.so
+LOAD /usr/lib/gcc/i486-linux-gnu/4.7/crtendS.o
+LOAD /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crtn.o
+                0x00000000000000f4                . = (0x0 + SIZEOF_HEADERS)
+
+.note.gnu.build-id
+                0x00000000000000f4       0x24
+ *(.note.gnu.build-id)
+ .note.gnu.build-id
+                0x00000000000000f4       0x24 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+
+.hash           0x0000000000000118       0xb4
+ *(.hash)
+ .hash          0x0000000000000118       0xb4 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+
+.gnu.hash       0x00000000000001cc       0xb0
+ *(.gnu.hash)
+ .gnu.hash      0x00000000000001cc       0xb0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+
+.dynsym         0x000000000000027c      0x1a0
+ *(.dynsym)
+ .dynsym        0x000000000000027c      0x1a0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+
+.dynstr         0x000000000000041c      0x1ed
+ *(.dynstr)
+ .dynstr        0x000000000000041c      0x1ed /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+
+.gnu.version    0x000000000000060a       0x34
+ *(.gnu.version)
+ .gnu.version   0x000000000000060a       0x34 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+
+.gnu.version_d  0x0000000000000640        0x0
+ *(.gnu.version_d)
+ .gnu.version_d
+                0x0000000000000000        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+
+.gnu.version_r  0x0000000000000640       0x30
+ *(.gnu.version_r)
+ .gnu.version_r
+                0x0000000000000640       0x30 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+
+.rel.dyn        0x0000000000000670       0x88
+ *(.rel.init)
+ .rel.init      0x0000000000000000        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
+ .rel.text      0x0000000000000670       0x48 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ *(.rel.fini)
+ .rel.fini      0x0000000000000000        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
+ *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
+ *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
+ .rel.data.rel  0x00000000000006b8        0x8 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
+ *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
+ *(.rel.ctors)
+ *(.rel.dtors)
+ *(.rel.got)
+ .rel.got       0x00000000000006c0       0x28 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
+ *(.rel.ifunc)
+ .rel.ifunc     0x0000000000000000        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ .rel.fini_array
+                0x00000000000006e8        0x8 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ .rel.init_array
+                0x00000000000006f0        0x8 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+
+.rel.plt        0x00000000000006f8       0x10
+ *(.rel.plt)
+ .rel.plt       0x00000000000006f8       0x10 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ *(.rel.iplt)
+
+.init           0x0000000000000708       0x23
+ *(.init)
+ .init          0x0000000000000708       0x1e /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+                0x0000000000000708                _init
+ .init          0x0000000000000726        0x5 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crtn.o
+
+.plt            0x0000000000000730       0x30
+ *(.plt)
+ .plt           0x0000000000000730       0x30 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ *(.iplt)
+
+.text           0x0000000000000760      0x21c
+ *(.text.unlikely .text.*_unlikely)
+ *(.text.exit .text.exit.*)
+ *(.text.startup .text.startup.*)
+ *(.text.hot .text.hot.*)
+ *(.text .stub .text.* .gnu.linkonce.t.*)
+ .text          0x0000000000000760        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ .gnu.linkonce.t.__x86.get_pc_thunk.bx
+                0x0000000000000760        0x4 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+                0x0000000000000760                __x86.get_pc_thunk.bx
+ *fill*         0x0000000000000764        0xc 90909090
+ .text          0x0000000000000770      0x11b /usr/lib/gcc/i486-linux-gnu/4.7/crtbeginS.o
+ *fill*         0x000000000000088b        0x1 90909090
+ .text          0x000000000000088c       0xed obj_cooja/libtest1.o
+                0x000000000000088c                Java_org_contikios_cooja_corecomm_LibTest1_init
+                0x0000000000000891                Java_org_contikios_cooja_corecomm_LibTest1_getMemory
+                0x00000000000008d1                Java_org_contikios_cooja_corecomm_LibTest1_setMemory
+                0x0000000000000948                Java_org_contikios_cooja_corecomm_LibTest1_tick
+                0x0000000000000967                Java_org_contikios_cooja_corecomm_LibTest1_setReferenceAddress
+ *fill*         0x0000000000000979        0x3 90909090
+ .text          0x000000000000097c        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/crtendS.o
+ .text          0x000000000000097c        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crtn.o
+ *(.gnu.warning)
+
+.fini           0x000000000000097c       0x14
+ *(.fini)
+ .fini          0x000000000000097c        0xf /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+                0x000000000000097c                _fini
+ .fini          0x000000000000098b        0x5 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crtn.o
+                0x0000000000000990                PROVIDE (__etext, .)
+                0x0000000000000990                PROVIDE (_etext, .)
+                0x0000000000000990                PROVIDE (etext, .)
+
+.rodata
+ *(.rodata .rodata.* .gnu.linkonce.r.*)
+
+.rodata1
+ *(.rodata1)
+
+.eh_frame_hdr   0x0000000000000990       0x3c
+ *(.eh_frame_hdr)
+ .eh_frame_hdr  0x0000000000000990       0x3c /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+
+.eh_frame       0x00000000000009cc       0xe0
+ *(.eh_frame)
+ .eh_frame      0x00000000000009cc       0x3c /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+                                         0x40 (size before relaxing)
+ .eh_frame      0x0000000000000a08       0xa0 obj_cooja/libtest1.o
+                                         0xb8 (size before relaxing)
+ .eh_frame      0x0000000000000aa8        0x4 /usr/lib/gcc/i486-linux-gnu/4.7/crtendS.o
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+                0x0000000000000aac                . = (ALIGN (0x1000) - ((0x1000 - .) & 0xfff))
+                0x0000000000001aac                . = DATA_SEGMENT_ALIGN (0x1000, 0x1000)
+
+.eh_frame
+ *(.eh_frame)
+
+.gcc_except_table
+ *(.gcc_except_table .gcc_except_table.*)
+
+.exception_ranges
+ *(.exception_ranges .exception_ranges*)
+
+.tdata
+ *(.tdata .tdata.* .gnu.linkonce.td.*)
+
+.tbss
+ *(.tbss .tbss.* .gnu.linkonce.tb.*)
+ *(.tcommon)
+
+.preinit_array
+ *(.preinit_array)
+
+.init_array     0x0000000000001aac        0x4
+ *(SORT(.init_array.*) SORT(.ctors.*))
+ *(.init_array)
+ .init_array    0x0000000000001aac        0x4 /usr/lib/gcc/i486-linux-gnu/4.7/crtbeginS.o
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
+
+.fini_array     0x0000000000001ab0        0x4
+ *(SORT(.fini_array.*) SORT(.dtors.*))
+ *(.fini_array)
+ .fini_array    0x0000000000001ab0        0x4 /usr/lib/gcc/i486-linux-gnu/4.7/crtbeginS.o
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
+
+.ctors
+ *crtbegin.o(.ctors)
+ *crtbegin?.o(.ctors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+
+.dtors
+ *crtbegin.o(.dtors)
+ *crtbegin?.o(.dtors)
+ *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+
+.jcr            0x0000000000001ab4        0x4
+ *(.jcr)
+ .jcr           0x0000000000001ab4        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/crtbeginS.o
+ .jcr           0x0000000000001ab4        0x4 /usr/lib/gcc/i486-linux-gnu/4.7/crtendS.o
+
+.data.rel.ro
+ *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
+ *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
+
+.dynamic        0x0000000000001ab8       0xf0
+ *(.dynamic)
+ .dynamic       0x0000000000001ab8       0xf0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+                0x0000000000001ab8                _DYNAMIC
+
+.got            0x0000000000001ba8       0x14
+ *(.got)
+ .got           0x0000000000001ba8       0x14 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ *(.igot)
+                0x0000000000001bbc                . = DATA_SEGMENT_RELRO_END (., 0xc)
+
+.got.plt        0x0000000000001bbc       0x14
+ *(.got.plt)
+ .got.plt       0x0000000000001bbc       0x14 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+                0x0000000000001bbc                _GLOBAL_OFFSET_TABLE_
+ *(.igot.plt)
+
+.data           0x0000000000001bd0       0x10
+ *(.data .data.* .gnu.linkonce.d.*)
+ .data          0x0000000000001bd0        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ .data          0x0000000000001bd0        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/crtbeginS.o
+ .data.rel      0x0000000000001bd0        0x4 /usr/lib/gcc/i486-linux-gnu/4.7/crtbeginS.o
+                0x0000000000001bd0                __dso_handle
+ .data          0x0000000000001bd4        0xc obj_cooja/libtest1.o
+                0x0000000000001bd4                var1
+                0x0000000000001bd8                var2
+                0x0000000000001bdc                var3
+ .data          0x0000000000001be0        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/crtendS.o
+ .data          0x0000000000001be0        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crtn.o
+
+.tm_clone_table
+                0x0000000000001be0        0x0
+ .tm_clone_table
+                0x0000000000001be0        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/crtbeginS.o
+ .tm_clone_table
+                0x0000000000001be0        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/crtendS.o
+
+.data1
+ *(.data1)
+                0x0000000000001be0                _edata = .
+                0x0000000000001be0                PROVIDE (edata, .)
+                0x0000000000001be0                __bss_start = .
+
+.bss            0x0000000000001be0       0x8c
+ *(.dynbss)
+ .dynbss        0x0000000000000000        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ *(.bss .bss.* .gnu.linkonce.b.*)
+ .bss           0x0000000000001be0        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crti.o
+ .bss           0x0000000000001be0        0x1 /usr/lib/gcc/i486-linux-gnu/4.7/crtbeginS.o
+ *fill*         0x0000000000001be1        0x3 00
+ .bss           0x0000000000001be4        0x4 obj_cooja/libtest1.o
+                0x0000000000001be4                simInterfaces
+ .bss           0x0000000000001be8        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/crtendS.o
+ .bss           0x0000000000001be8        0x0 /usr/lib/gcc/i486-linux-gnu/4.7/../../../i386-linux-gnu/crtn.o
+ *(COMMON)
+ *fill*         0x0000000000001be8       0x18 00
+ COMMON         0x0000000000001c00       0x6c obj_cooja/libtest1.o
+                0x0000000000001c00                arr1
+                0x0000000000001c28                uvar2
+                0x0000000000001c2c                referenceVar
+                0x0000000000001c40                arr2
+                0x0000000000001c68                uvar1
+                0x0000000000001c6c                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x0000000000001c6c                . = ALIGN (0x4)
+                0x0000000000001c6c                . = ALIGN (0x4)
+                0x0000000000001c6c                _end = .
+                0x0000000000001c6c                PROVIDE (end, .)
+                0x0000000000001c6c                . = DATA_SEGMENT_END (.)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.comment        0x0000000000000000       0x1c
+ *(.comment)
+ .comment       0x0000000000000000       0x1c /usr/lib/gcc/i486-linux-gnu/4.7/crtbeginS.o
+                                         0x1d (size before relaxing)
+ .comment       0x0000000000000000       0x1d obj_cooja/libtest1.o
+ .comment       0x0000000000000000       0x1d /usr/lib/gcc/i486-linux-gnu/4.7/crtendS.o
+
+.debug
+ *(.debug)
+
+.line
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+
+.debug_aranges  0x0000000000000000       0x20
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x20 obj_cooja/libtest1.o
+
+.debug_pubnames
+ *(.debug_pubnames)
+
+.debug_info     0x0000000000000000     0x31d4
+ *(.debug_info .gnu.linkonce.wi.*)
+ .debug_info    0x0000000000000000     0x31d4 obj_cooja/libtest1.o
+
+.debug_abbrev   0x0000000000000000      0x183
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000      0x183 obj_cooja/libtest1.o
+
+.debug_line     0x0000000000000000       0xf9
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0xf9 obj_cooja/libtest1.o
+
+.debug_frame
+ *(.debug_frame)
+
+.debug_str      0x0000000000000000     0x157f
+ *(.debug_str)
+ .debug_str     0x0000000000000000     0x157f obj_cooja/libtest1.o
+                                       0x15fe (size before relaxing)
+
+.debug_loc      0x0000000000000000      0x118
+ *(.debug_loc)
+ .debug_loc     0x0000000000000000      0x118 obj_cooja/libtest1.o
+
+.debug_macinfo
+ *(.debug_macinfo)
+
+.debug_weaknames
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.debug_ranges
+ *(.debug_ranges)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+/DISCARD/
+ *(.note.GNU-stack)
+ *(.gnu_debuglink)
+ *(.gnu.lto_*)
+OUTPUT(obj_cooja/libtest1.cooja elf32-i386)
