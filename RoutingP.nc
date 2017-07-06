@@ -9,18 +9,16 @@ module RoutingP {
   uses {
     interface Timer<TMilli> as RefreshTimer;
     interface Timer<TMilli> as NotificationTimer;
-    interface Timer<TMilli> as RelayTimer;
 	interface Timer<TMilli> as InfoTimer;
 	interface Timer<TMilli> as InfoTimerRescheduling;
+	interface Timer<TMilli> as PrintRoutingTableTimer;
     interface Leds;
     interface Boot;
     interface AMPacket;
 	interface PacketLink;
     interface AMSend as BeaconSend;
-    interface AMSend as DataSend;
 	interface AMSend as InfoToRootSend; 
     interface Receive as BeaconReceive;
-    interface Receive as DataReceive;
 	interface Receive as InfoToRootReceiver;
     interface CC2420Packet;
 	interface SplitControl as AMControl;
@@ -34,6 +32,7 @@ implementation {
 #define NUM_RETRIES 3
 #define RSSI_THRESHOLD (-90)
 #define REBUILD_PERIOD (120*1024L) //exactly 120 seconds, 1024 ticks per second in TinyOS 
+#define PRINTROUTINGTABLE_PERIOD (100*1024L)
 #define MAX_METRIC 65535U
 #define MAX_NODES 30
 #define BEACON_PERIOD (120*1024L)
@@ -69,11 +68,17 @@ event void Boot.booted() {
 	call AMControl.start();
 }
 
+command uint8_t Routing.getParent(){
+	return current_parent;
+}
+
+
 command void Routing.buildTree() {
 	i_am_sink = TRUE;
 	current_hops_to_sink = 0;
 	post send_beacon();
-//	call RefreshTimer.startPeriodic(REBUILD_PERIOD);
+	call RefreshTimer.startPeriodic(REBUILD_PERIOD);
+	call PrintRoutingTableTimer.startPeriodic(PRINTROUTINGTABLE_PERIOD);
 }
 
 task void send_beacon(){
@@ -221,10 +226,9 @@ event message_t* InfoToRootReceiver.receive(message_t*msg, void* payload, uint8_
 		{
 			insertNodeInRoutingTable(receiveInfoBeacon->child, receiveInfoBeacon->father);
 		}
-		printRoutingTable();
 		return msg;
 	}
-	printf("[INFO] I'm not the root, I will forward the message to my parent, the source of the message is %d and the destination is the root\n", receiveInfoBeacon->child);
+//	printf("[INFO] I'm not the root, I will forward the message to my parent, the source of the message is %d and the destination is the root\n", receiveInfoBeacon->child);
 	createInfoBeacon(receiveInfoBeacon->child, receiveInfoBeacon->father);
 	//TODO implement the receiving of a info message, check if i'm the root
 	return msg;
@@ -274,60 +278,6 @@ event message_t* BeaconReceive.receive(message_t* msg, void* payload, uint8_t le
 }
 
 
-void send_data() {
-	error_t err;
-
-	call PacketLink.setRetries(&data_output, NUM_RETRIES); // important to set it every time
-	err = call DataSend.send(current_parent, &data_output, sizeof(CollectionData));
-	if (err == SUCCESS)
-		sending_data = TRUE;
-	else
-		sending_data = FALSE;
-}
-
-event void DataSend.sendDone(message_t* msg, error_t error) {
-	sending_data = FALSE;
-}
-
-command void Routing.send(MyData * d) {
-	CollectionData* payload;
-   
-	if (sending_data)
-		return;
-	if (current_parent == TOS_NODE_ID) // we don't have a parent
-		return;
-	
-	payload = call DataSend.getPayload(&data_output, sizeof(CollectionData));
-
-	payload->hops = 0;
-	payload->data = *d;
-	payload->from = TOS_NODE_ID;
-	send_data();
-}
-
-event message_t* DataReceive.receive(message_t* msg, void* payload, uint8_t len) {
-	CollectionData* payload_in = payload;
-	
-	if (i_am_sink) {
-		signal Routing.receive(payload_in->from, &payload_in->data);
-	}
-	else {
-		CollectionData* payload_out;
-		if (sending_data)
-			return msg;
-		if (current_parent == TOS_NODE_ID) // we don't have a parent
-			return msg;
-
-		payload_out = call DataSend.getPayload(&data_output, sizeof(CollectionData));
-		
-		sending_data = TRUE;
-		memcpy(payload_out, payload_in, sizeof(CollectionData));
-		payload_out->hops++;
-		call RelayTimer.startOneShot(10);
-	}
-	return msg;
-}
-
 
 void createInfoBeacon(uint8_t child_address, uint8_t father_address)
 {
@@ -353,7 +303,7 @@ void sendInfoBeacon()
 	error_t status;
 	call PacketLink.setRetries(&info_output, NUM_RETRIES); // important to set it every time
 	infoBeacon = call InfoToRootSend.getPayload(&info_output, sizeof(InfoBeacon));
-	printf("[INFO] I'm sending the infoBeacon to the root, I'm %d , the entry that I'm sending is %d,%d\n", TOS_NODE_ID, infoBeacon->child, infoBeacon->father);
+//	printf("[INFO] I'm sending the infoBeacon to the root, I'm %d , the entry that I'm sending is %d,%d\n", TOS_NODE_ID, infoBeacon->child, infoBeacon->father);
 	status = call InfoToRootSend.send(current_parent, &info_output, sizeof(InfoBeacon));
 	if(status != SUCCESS)
 	{
@@ -372,12 +322,13 @@ event void InfoTimerRescheduling.fired()
 {
 	createInfoBeacon(infoBeaconToReschedule.childAddress, infoBeaconToReschedule.parentAddress);
 }
-event void RelayTimer.fired() {
-	send_data();
-}
+
 event void InfoTimer.fired() {
 	createInfoBeacon(TOS_NODE_ID, current_parent);
 	//TODO: call forwarding info to root
+}
+event void PrintRoutingTableTimer.fired(){
+	printRoutingTable();
 }
 event void AMControl.startDone(error_t err) {
 	if (err != SUCCESS) {

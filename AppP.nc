@@ -4,6 +4,7 @@
 #include <printf.h>
 module AppP {
 	uses interface Routing;
+	uses interface ManyToOne;
 	uses interface Boot;
 	uses interface Timer<TMilli> as StartTimer;
 	uses interface Timer<TMilli> as PeriodicTimer;
@@ -27,7 +28,7 @@ implementation
 		}
 		else {
 			// TODO: uncomment the following to enable sending data
-		//	call PeriodicTimer.startPeriodic(IMI);
+			call PeriodicTimer.startPeriodic(IMI);
 		}
 	}
 
@@ -36,11 +37,14 @@ implementation
 	}
 
 	event void JitterTimer.fired() {
-		printf("app:Send to sink seqn %d\n", data.seqn);
-		call Routing.send(&data);
-		data.seqn++;
+		if(data.seqn<40)
+		{	
+			printf("app:Send to sink seqn %d\n", data.seqn);
+			call ManyToOne.send(&data);
+			data.seqn++;
+		}
 	}
-	event void Routing.receive(am_addr_t from, MyData* d) {
+	event void ManyToOne.receive(am_addr_t from, MyData* d) {
 		printf("app:Recv from %d seqn %d\n", from, d->seqn);
 	}
 }
