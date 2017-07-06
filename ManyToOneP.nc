@@ -27,7 +27,7 @@ implementation{
 message_t data_output;
 bool sending_data;
 bool i_am_sink;
-MyData tmp;
+CollectionData* queuedPacket;
 
 event void Boot.booted() {
 	/* setting up the LPL layer */
@@ -39,18 +39,23 @@ event void Boot.booted() {
 	call AMControl.start();
 }
 
-void send_data() {
+void send_data(CollectionData* payload_to_send) {
 	error_t err;
 	uint8_t current_parent;
+	CollectionData* payload = call DataSend.getPayload(&data_output, sizeof(CollectionData));
+	payload -> from = payload_to_send -> from;
+	payload -> hops = payload_to_send -> hops;
+	payload -> data = payload_to_send -> data;
 	call PacketLink.setRetries(&data_output, NUM_RETRIES); // important to set it every time
    	current_parent = call Routing.getParent();
 	err = call DataSend.send(current_parent, &data_output, sizeof(CollectionData));
 	if (err == SUCCESS)
 		sending_data = TRUE;
 	else{
-		call RetryForwardingTimer.startOneShot(call Random.rand16() % RESCHEDULING_SEND);
+		queuedPacket = payload;
+		sending_data = FALSE;
+		call RetryForwardingTimer.startOneShot(call Random.rand16() % RESCHEDULING_SEND);}
 		//TODO handle rescheduling
-		sending_data = FALSE;}
 }
 
 event void DataSend.sendDone(message_t* msg, error_t error) {
@@ -63,19 +68,17 @@ event void DataSend.sendDone(message_t* msg, error_t error) {
 
 command void ManyToOne.send(MyData * d) {
 	CollectionData* payload;
-   
+	payload = call DataSend.getPayload(&data_output, sizeof(CollectionData));
+   	payload->hops = 0;
+	payload->data = *d;
+	payload->from = TOS_NODE_ID;
 	if (sending_data)
 	{
-		tmp.seqn = d->seqn;
+		queuedPacket = payload;
 		call RetryForwardingTimer.startOneShot(call Random.rand16() %RESCHEDULING_SEND);
 	}
 	else{
-	payload = call DataSend.getPayload(&data_output, sizeof(CollectionData));
-
-	payload->hops = 0;
-	payload->data = *d;
-	payload->from = TOS_NODE_ID;
-	send_data();
+	send_data(payload);
 	}
 }
 
@@ -91,18 +94,17 @@ event message_t* DataReceive.receive(message_t* msg, void* payload, uint8_t len)
 			return msg;
 
 		payload_out = call DataSend.getPayload(&data_output, sizeof(CollectionData));
-		
 		sending_data = TRUE;
 		memcpy(payload_out, payload_in, sizeof(CollectionData));
 		payload_out->hops++;
-		send_data();
+		send_data(payload_out);
 	}
 	return msg;
 }
 
 event void RetryForwardingTimer.fired() {
 	//TODO: call forwarding info to root
-	call ManyToOne.send(&tmp);
+	send_data(queuedPacket);
 
 }
 event void AMControl.startDone(error_t err) {
