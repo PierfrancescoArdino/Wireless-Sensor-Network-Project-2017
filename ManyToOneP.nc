@@ -23,7 +23,7 @@ module ManyToOneP{
 }
 implementation{
 #define NUM_RETRIES 3
-#define RESCHEDULING_SEND (4*1024L)
+#define RESCHEDULING_SEND (3*1024L)
 message_t data_output;
 bool sending_data;
 bool i_am_sink;
@@ -90,14 +90,18 @@ event message_t* DataReceive.receive(message_t* msg, void* payload, uint8_t len)
 	}
 	else {
 		CollectionData* payload_out;
-		if (sending_data)
-			return msg;
-
 		payload_out = call DataSend.getPayload(&data_output, sizeof(CollectionData));
-		sending_data = TRUE;
 		memcpy(payload_out, payload_in, sizeof(CollectionData));
 		payload_out->hops++;
+		if (sending_data)
+		{
+			queuedPacket = payload_out;
+			call RetryForwardingTimer.startOneShot(call Random.rand16() % RESCHEDULING_SEND);		
+		}
+		else{
+		sending_data = TRUE;
 		send_data(payload_out);
+		}
 	}
 	return msg;
 }
