@@ -35,6 +35,7 @@ implementation {
 #define PRINTROUTINGTABLE_PERIOD (100*1024L)
 #define MAX_METRIC 65535U
 #define MAX_NODES 30
+#define MAX_ROUTE_LENGTH 30
 #define BEACON_PERIOD (120*1024L)
 #define BEACON_REPEAT_RESCHEDULING (3*1024L)           
 #define BEACON_REPEAT_PERIOD (1*1024L)           
@@ -47,6 +48,7 @@ bool sending_beacon;
 bool sending_data;
 bool sending_info;
 bool i_am_sink;
+uint8_t path[MAX_ROUTE_LENGTH];
 uint16_t current_seq_no;
 uint16_t current_parent;
 uint16_t current_hops_to_sink = MAX_METRIC; 
@@ -68,10 +70,60 @@ event void Boot.booted() {
 	call AMControl.start();
 }
 
+command uint8_t Routing.getRandomNode()
+{
+	return routingTable[(uint8_t)(call Random.rand16() % routingTableIndex)].childAddress;
+}
+
 command uint8_t Routing.getParent(){
 	return current_parent;
 }
 
+
+command uint8_t* Routing.getDestinationRoute(uint8_t destinationNode)
+{
+	int8_t i;
+	uint8_t j;
+	uint8_t currDest;
+	uint8_t hop=0;
+	uint8_t reversePath[MAX_ROUTE_LENGTH];
+	bool nodeFound;
+	currDest = destinationNode;
+	reversePath[hop] = currDest;
+	hop++;
+	do{
+		nodeFound=FALSE;
+		for(i=0; i<routingTableIndex; i++)
+		{
+			if(routingTable[i].childAddress == currDest)
+			{
+				currDest = routingTable[i].parentAddress;
+				reversePath[hop] = currDest;
+				hop++;
+				nodeFound=TRUE;
+			}
+		}
+		if(!nodeFound){
+			printf("[INFO] %d can not be reached\n", destinationNode);
+			return NULL;
+		}
+		if(hop > MAX_ROUTE_LENGTH){
+			printf("[INFO] The path is too long\n");
+			return NULL;
+		}	
+	}while(currDest!=1);
+	i=hop-2;
+	j=0;
+	while(i>-1)
+	{
+		uint8_t temp;
+		temp = reversePath[i];
+		path[j] = temp;
+		i--;
+		j++;	
+	}
+	return path;
+}
 
 command void Routing.buildTree() {
 	i_am_sink = TRUE;

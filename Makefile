@@ -2,7 +2,7 @@ COMPONENT=AppC
 TINYOS_ROOT_DIR?=/home/user/tinyos
 
 # max payload size, may grow up to 90 (circa)
-CFLAGS += -DTOSH_DATA_LENGTH=28
+CFLAGS += -DTOSH_DATA_LENGTH=60
 # radio frequency channel from 11 to 26
 CFLAGS += -DCC2420_DEF_CHANNEL=26
 # transmission power from 1 to 31

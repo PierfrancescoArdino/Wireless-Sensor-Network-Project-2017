@@ -5,6 +5,8 @@ enum {
   AM_COLLECTIONBEACON = 0x88,
   AM_SENDTOSOURCEBEACON = 0x89,
   AM_COLLECTIONDATA = 0x99,
+  AM_SINKDATA = 0x98,
+  MAX_ROUTE_LENGTH = 30,
 };
 
 // beacon packet
@@ -32,4 +34,11 @@ typedef struct RoutingTableStruct{
 	uint8_t childAddress;
 	uint8_t parentAddress;
 } RoutingTableStruct;
+
+typedef nx_struct {
+	nx_uint16_t finalDest;
+	MyData data;
+	nx_uint8_t destRoute[MAX_ROUTE_LENGTH];
+} DataFromSink;
+
 #endif

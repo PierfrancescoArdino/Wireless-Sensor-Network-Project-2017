@@ -5,6 +5,7 @@
 module AppP {
 	uses interface Routing;
 	uses interface ManyToOne;
+	uses interface OneToMany;
 	uses interface Boot;
 	uses interface Timer<TMilli> as StartTimer;
 	uses interface Timer<TMilli> as PeriodicTimer;
@@ -13,8 +14,10 @@ module AppP {
 }
 implementation
 {
-#define IMI (60*1024L)
-#define JITTER (50*1024L)
+#define MANY_TO_ONE (60*1024L)
+#define ONE_TO_MANY (100*1024L)
+#define JITTER (40*1024L)
+#define JITTER2 (50*1024L)
 
 	MyData data;
 	
@@ -25,26 +28,42 @@ implementation
 	event void StartTimer.fired() {
 		if (TOS_NODE_ID == 1) {
 			call Routing.buildTree();
+			call PeriodicTimer.startPeriodic(ONE_TO_MANY);
 		}
 		else {
 			// TODO: uncomment the following to enable sending data
-			call PeriodicTimer.startPeriodic(IMI);
+		//	call PeriodicTimer.startPeriodic(MANY_TO_ONE);
 		}
 	}
 
 	event void PeriodicTimer.fired() {
-		call JitterTimer.startOneShot(call Random.rand16() % JITTER);
+		if (TOS_NODE_ID ==1)
+			call JitterTimer.startOneShot(call Random.rand16() % JITTER);
+		else
+			call JitterTimer.startOneShot(call Random.rand16() % JITTER2);
 	}
 
 	event void JitterTimer.fired() {
-		if(data.seqn<40)
-		{	
-			printf("app:Send to sink seqn %d\n", data.seqn);
-			call ManyToOne.send(&data);
-			data.seqn++;
+		if(data.seqn<60)
+		{
+			if(TOS_NODE_ID == 1){
+				uint8_t destNode = call Routing.getRandomNode();
+				printf("app:Send to node %d seqn %d\n", destNode, data.seqn);
+				call OneToMany.send(&data, destNode);
+				data.seqn++;
+			}
+			else{
+				printf("app:Send to sink seqn %d\n", data.seqn);
+				call ManyToOne.send(&data);
+				data.seqn++;
+
+			}
 		}
 	}
 	event void ManyToOne.receive(am_addr_t from, MyData* d) {
 		printf("app:Recv from %d seqn %d\n", from, d->seqn);
+	}
+	event void OneToMany.receive(MyData* d) {
+		printf("app:Recv from sink seqn %d\n", d->seqn);
 	}
 }
