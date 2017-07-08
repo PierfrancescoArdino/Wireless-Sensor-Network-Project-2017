@@ -1,4 +1,5 @@
 COOJA.log
 *.log
+*.txt
 build/
 build/*

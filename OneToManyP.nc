@@ -27,11 +27,10 @@ module OneToManyP {
 implementation
 {
 	#define NUM_RETRIES 3
-	#define RETRY_JITTER (5*1024L)
-	uint8_t seq_no;
+	#define RETRY_JITTER (3*1024L)
 	message_t data_output;
 	DataFromSink* queuedDestData;
-
+	bool sending_data;
 	void sendSinkData(DataFromSink* data);
 	
 	event void Boot.booted() {
@@ -60,14 +59,22 @@ implementation
 				destData -> destRoute[i] = pathToDestNode[i];
 			
 		}
-		sendSinkData(destData);
+		if(sending_data)
+		{
+			queuedDestData = destData;
+			call RetryForwarding.startOneShot((call Random.rand16())% RETRY_JITTER);
+		}
+		else
+		{
+			sendSinkData(destData);
+		}
 	}
 
 	void sendSinkData(DataFromSink* data) {
   		error_t status;
 		DataFromSink* destData = call DataFromSinkSend.getPayload(&data_output, sizeof(DataFromSink));
 		if (destData == NULL)
-			printf("loooooooooool \n");
+			printf("[ERROR] Something gone wrong with the payload creation \n");
   		destData -> finalDest = data -> finalDest;
   		destData -> data = data -> data;
   //		destData -> destRoute = data -> destRoute;
@@ -76,11 +83,14 @@ implementation
   		status = call DataFromSinkSend.send(destData -> destRoute[0] , &data_output, sizeof(DataFromSink));
   		if(status != SUCCESS) {
 			printf("[ERROR] Send DataFromSink failed, retrying soon...\n");
-			queuedDestData->finalDest = data -> finalDest;
-			queuedDestData->data = data -> data;
-			memcpy(queuedDestData -> destRoute, data -> destRoute,  MAX_ROUTE_LENGTH * sizeof(data->destRoute[0]));
+			queuedDestData = data;
+			sending_data=FALSE;
 			//			queuedDestData->destRoute = data -> destRoute;
 			call RetryForwarding.startOneShot((call Random.rand16()) % RETRY_JITTER);
+		}
+		else
+		{
+			sending_data=TRUE;
 		}
   	}
 
@@ -89,7 +99,9 @@ implementation
   	}
 
 	event void DataFromSinkSend.sendDone(message_t* msg, error_t error){
+		sending_data= FALSE;	
 	}
+
 
 	event message_t* DataFromSinkReceive.receive(message_t* msg, void* payload, uint8_t length) {
 		DataFromSink* receivedDataFromSink = (DataFromSink*)payload;
@@ -113,8 +125,15 @@ implementation
 			receivedDataFromSink->destRoute[i-1] = receivedDataFromSink->destRoute[i];
 		}
 
-		sendSinkData(receivedDataFromSink);
-
+		if (sending_data)
+		{
+			queuedDestData= receivedDataFromSink;
+			call RetryForwarding.startOneShot(call Random.rand16() % RETRY_JITTER);
+		}
+		else{
+			sending_data=TRUE;
+			sendSinkData(receivedDataFromSink);
+		}
 		return msg;
 	}
 
