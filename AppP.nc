@@ -31,8 +31,7 @@ implementation
 			call PeriodicTimer.startPeriodic(ONE_TO_MANY);
 		}
 		else {
-			// TODO: uncomment the following to enable sending data
-		//	call PeriodicTimer.startPeriodic(MANY_TO_ONE);
+			call PeriodicTimer.startPeriodic(MANY_TO_ONE);
 		}
 	}
 
@@ -44,7 +43,7 @@ implementation
 	}
 
 	event void JitterTimer.fired() {
-		if(data.seqn<60)
+		if(data.seqn<100)
 		{
 			if(TOS_NODE_ID == 1){
 				uint8_t destNode = call Routing.getRandomNode();

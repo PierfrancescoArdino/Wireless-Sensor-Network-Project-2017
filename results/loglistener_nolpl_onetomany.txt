@@ -1,0 +1,342 @@
+00:31.152	ID:1	[INFO] I'm the source, I've received an info packet from 3
+00:33.598	ID:1	[INFO] I'm the source, I've received an info packet from 6
+00:33.731	ID:1	[INFO] I'm the source, I've received an info packet from 2
+00:35.516	ID:1	[INFO] I'm the source, I've received an info packet from 15
+00:35.774	ID:1	[INFO] I'm the source, I've received an info packet from 4
+00:36.626	ID:14	ERROR CAN NOT SEND INFO BEACON WITH CHILD 14 AND FATHER 3 I'M 14 RESCHEDULING
+00:36.633	ID:1	[INFO] I'm the source, I've received an info packet from 9
+00:36.927	ID:1	[INFO] I'm the source, I've received an info packet from 5
+00:37.716	ID:1	[INFO] I'm the source, I've received an info packet from 7
+00:38.764	ID:1	[INFO] I'm the source, I've received an info packet from 13
+00:40.342	ID:1	[INFO] I'm the source, I've received an info packet from 14
+00:40.450	ID:1	[INFO] I'm the source, I've received an info packet from 11
+01:54.471	ID:1	[INFO] RoutingTable at position 0, is 3 1 
+01:54.474	ID:1	[INFO] RoutingTable at position 1, is 6 2 
+01:54.476	ID:1	[INFO] RoutingTable at position 2, is 2 1 
+01:54.478	ID:1	[INFO] RoutingTable at position 3, is 15 6 
+01:54.481	ID:1	[INFO] RoutingTable at position 4, is 4 2 
+01:54.483	ID:1	[INFO] RoutingTable at position 5, is 9 14 
+01:54.486	ID:1	[INFO] RoutingTable at position 6, is 5 3 
+01:54.488	ID:1	[INFO] RoutingTable at position 7, is 7 4 
+01:54.491	ID:1	[INFO] RoutingTable at position 8, is 13 12 
+01:54.493	ID:1	[INFO] RoutingTable at position 9, is 14 3 
+01:54.496	ID:1	[INFO] RoutingTable at position 10, is 11 14 
+02:23.968	ID:1	app:Send to node 2 seqn 0
+02:23.984	ID:2	[INFO] Received a packet from the sink, the destination is 2 
+02:23.986	ID:2	app:Recv from sink seqn 0
+02:32.368	ID:1	[INFO] I'm the source, I've received an info packet from 3
+02:32.716	ID:1	[INFO] I'm the source, I've received an info packet from 2
+02:33.568	ID:1	[INFO] I'm the source, I've received an info packet from 4
+02:34.916	ID:1	[INFO] I'm the source, I've received an info packet from 7
+02:35.408	ID:1	[INFO] I'm the source, I've received an info packet from 6
+02:36.565	ID:1	[INFO] I'm the source, I've received an info packet from 12
+02:37.175	ID:1	[INFO] I'm the source, I've received an info packet from 5
+02:37.515	ID:1	[INFO] I'm the source, I've received an info packet from 14
+02:38.305	ID:1	[INFO] I'm the source, I've received an info packet from 10
+02:41.222	ID:1	[INFO] I'm the source, I've received an info packet from 13
+02:41.614	ID:1	[INFO] I'm the source, I've received an info packet from 11
+02:43.311	ID:1	[INFO] I'm the source, I've received an info packet from 15
+03:34.471	ID:1	[INFO] RoutingTable at position 0, is 3 1 
+03:34.474	ID:1	[INFO] RoutingTable at position 1, is 6 4 
+03:34.476	ID:1	[INFO] RoutingTable at position 2, is 2 1 
+03:34.479	ID:1	[INFO] RoutingTable at position 3, is 15 12 
+03:34.481	ID:1	[INFO] RoutingTable at position 4, is 4 1 
+03:34.483	ID:1	[INFO] RoutingTable at position 5, is 9 14 
+03:34.486	ID:1	[INFO] RoutingTable at position 6, is 5 4 
+03:34.488	ID:1	[INFO] RoutingTable at position 7, is 7 4 
+03:34.491	ID:1	[INFO] RoutingTable at position 8, is 13 12 
+03:34.493	ID:1	[INFO] RoutingTable at position 9, is 14 3 
+03:34.496	ID:1	[INFO] RoutingTable at position 10, is 11 14 
+03:34.499	ID:1	[INFO] RoutingTable at position 11, is 12 6 
+03:34.501	ID:1	[INFO] RoutingTable at position 12, is 10 7 
+03:39.893	ID:1	app:Send to node 13 seqn 1
+03:39.908	ID:4	[INFO] Received a packet from the sink, the destination is 13 
+03:39.922	ID:6	[INFO] Received a packet from the sink, the destination is 13 
+03:39.938	ID:12	[INFO] Received a packet from the sink, the destination is 13 
+03:39.970	ID:13	[INFO] Received a packet from the sink, the destination is 13 
+03:39.972	ID:13	app:Recv from sink seqn 1
+04:30.668	ID:1	[INFO] I'm the source, I've received an info packet from 3
+04:31.396	ID:1	[INFO] I'm the source, I've received an info packet from 2
+04:31.765	ID:1	[INFO] I'm the source, I've received an info packet from 14
+04:33.045	ID:1	[INFO] I'm the source, I've received an info packet from 5
+04:34.119	ID:1	[INFO] I'm the source, I've received an info packet from 4
+04:37.116	ID:1	[INFO] I'm the source, I've received an info packet from 9
+04:37.535	ID:1	[INFO] I'm the source, I've received an info packet from 12
+04:39.360	ID:1	[INFO] I'm the source, I've received an info packet from 15
+04:39.608	ID:1	[INFO] I'm the source, I've received an info packet from 10
+04:39.837	ID:1	[INFO] I'm the source, I've received an info packet from 6
+05:14.471	ID:1	[INFO] RoutingTable at position 0, is 3 1 
+05:14.474	ID:1	[INFO] RoutingTable at position 1, is 6 4 
+05:14.476	ID:1	[INFO] RoutingTable at position 2, is 2 1 
+05:14.478	ID:1	[INFO] RoutingTable at position 3, is 15 4 
+05:14.481	ID:1	[INFO] RoutingTable at position 4, is 4 5 
+05:14.483	ID:1	[INFO] RoutingTable at position 5, is 9 7 
+05:14.486	ID:1	[INFO] RoutingTable at position 6, is 5 3 
+05:14.488	ID:1	[INFO] RoutingTable at position 7, is 7 4 
+05:14.491	ID:1	[INFO] RoutingTable at position 8, is 13 12 
+05:14.493	ID:1	[INFO] RoutingTable at position 9, is 14 3 
+05:14.496	ID:1	[INFO] RoutingTable at position 10, is 11 14 
+05:14.498	ID:1	[INFO] RoutingTable at position 11, is 12 4 
+05:14.501	ID:1	[INFO] RoutingTable at position 12, is 10 7 
+05:16.654	ID:1	app:Send to node 13 seqn 2
+06:31.550	ID:1	[INFO] I'm the source, I've received an info packet from 4
+06:33.289	ID:1	[INFO] I'm the source, I've received an info packet from 2
+06:33.791	ID:1	[INFO] I'm the source, I've received an info packet from 12
+06:34.099	ID:1	[INFO] I'm the source, I've received an info packet from 3
+06:34.510	ID:1	[INFO] I'm the source, I've received an info packet from 15
+06:35.118	ID:1	[INFO] I'm the source, I've received an info packet from 7
+06:36.166	ID:1	[INFO] I'm the source, I've received an info packet from 13
+06:36.261	ID:1	[INFO] I'm the source, I've received an info packet from 11
+06:37.240	ID:1	[INFO] I'm the source, I've received an info packet from 6
+06:39.422	ID:1	[INFO] I'm the source, I've received an info packet from 9
+06:39.709	ID:1	[INFO] I'm the source, I've received an info packet from 8
+06:45.130	ID:1	[INFO] I'm the source, I've received an info packet from 10
+06:54.471	ID:1	[INFO] RoutingTable at position 0, is 3 2 
+06:54.474	ID:1	[INFO] RoutingTable at position 1, is 6 4 
+06:54.476	ID:1	[INFO] RoutingTable at position 2, is 2 1 
+06:54.478	ID:1	[INFO] RoutingTable at position 3, is 15 4 
+06:54.481	ID:1	[INFO] RoutingTable at position 4, is 4 1 
+06:54.483	ID:1	[INFO] RoutingTable at position 5, is 9 7 
+06:54.486	ID:1	[INFO] RoutingTable at position 6, is 5 3 
+06:54.488	ID:1	[INFO] RoutingTable at position 7, is 7 6 
+06:54.491	ID:1	[INFO] RoutingTable at position 8, is 13 15 
+06:54.493	ID:1	[INFO] RoutingTable at position 9, is 14 3 
+06:54.496	ID:1	[INFO] RoutingTable at position 10, is 11 5 
+06:54.498	ID:1	[INFO] RoutingTable at position 11, is 12 4 
+06:54.501	ID:1	[INFO] RoutingTable at position 12, is 10 8 
+06:54.504	ID:1	[INFO] RoutingTable at position 13, is 8 12 
+07:00.447	ID:1	app:Send to node 13 seqn 3
+07:00.460	ID:4	[INFO] Received a packet from the sink, the destination is 13 
+08:29.865	ID:1	[INFO] I'm the source, I've received an info packet from 3
+08:32.248	ID:1	[INFO] I'm the source, I've received an info packet from 2
+08:33.430	ID:1	[INFO] I'm the source, I've received an info packet from 4
+08:33.701	ID:1	[INFO] I'm the source, I've received an info packet from 8
+08:34.115	ID:1	[INFO] I'm the source, I've received an info packet from 5
+08:34.471	ID:1	[INFO] RoutingTable at position 0, is 3 1 
+08:34.474	ID:1	[INFO] RoutingTable at position 1, is 6 4 
+08:34.476	ID:1	[INFO] RoutingTable at position 2, is 2 1 
+08:34.478	ID:1	[INFO] RoutingTable at position 3, is 15 4 
+08:34.481	ID:1	[INFO] RoutingTable at position 4, is 4 1 
+08:34.483	ID:1	[INFO] RoutingTable at position 5, is 9 7 
+08:34.486	ID:1	[INFO] RoutingTable at position 6, is 5 3 
+08:34.488	ID:1	[INFO] RoutingTable at position 7, is 7 6 
+08:34.491	ID:1	[INFO] RoutingTable at position 8, is 13 15 
+08:34.493	ID:1	[INFO] RoutingTable at position 9, is 14 3 
+08:34.496	ID:1	[INFO] RoutingTable at position 10, is 11 5 
+08:34.498	ID:1	[INFO] RoutingTable at position 11, is 12 4 
+08:34.501	ID:1	[INFO] RoutingTable at position 12, is 10 8 
+08:34.504	ID:1	[INFO] RoutingTable at position 13, is 8 12 
+08:34.729	ID:1	[INFO] I'm the source, I've received an info packet from 15
+08:35.234	ID:4	ERROR CAN NOT SEND INFO BEACON WITH CHILD 12 AND FATHER 4 I'M 4 RESCHEDULING
+08:35.244	ID:1	[INFO] I'm the source, I've received an info packet from 10
+08:35.303	ID:1	[INFO] I'm the source, I've received an info packet from 14
+08:36.250	ID:1	[INFO] I'm the source, I've received an info packet from 11
+08:36.494	ID:1	[INFO] I'm the source, I've received an info packet from 12
+08:38.547	ID:1	[INFO] I'm the source, I've received an info packet from 7
+08:40.289	ID:1	[INFO] I'm the source, I've received an info packet from 13
+09:07.039	ID:1	app:Send to node 3 seqn 4
+09:07.049	ID:3	[INFO] Received a packet from the sink, the destination is 3 
+09:07.051	ID:3	app:Recv from sink seqn 4
+10:14.472	ID:1	[INFO] RoutingTable at position 0, is 3 1 
+10:14.474	ID:1	[INFO] RoutingTable at position 1, is 6 4 
+10:14.476	ID:1	[INFO] RoutingTable at position 2, is 2 1 
+10:14.479	ID:1	[INFO] RoutingTable at position 3, is 15 4 
+10:14.481	ID:1	[INFO] RoutingTable at position 4, is 4 1 
+10:14.484	ID:1	[INFO] RoutingTable at position 5, is 9 7 
+10:14.486	ID:1	[INFO] RoutingTable at position 6, is 5 3 
+10:14.488	ID:1	[INFO] RoutingTable at position 7, is 7 6 
+10:14.491	ID:1	[INFO] RoutingTable at position 8, is 13 8 
+10:14.493	ID:1	[INFO] RoutingTable at position 9, is 14 5 
+10:14.496	ID:1	[INFO] RoutingTable at position 10, is 11 5 
+10:14.499	ID:1	[INFO] RoutingTable at position 11, is 12 4 
+10:14.501	ID:1	[INFO] RoutingTable at position 12, is 10 6 
+10:14.504	ID:1	[INFO] RoutingTable at position 13, is 8 12 
+10:30.171	ID:1	[INFO] I'm the source, I've received an info packet from 2
+10:31.604	ID:1	[INFO] I'm the source, I've received an info packet from 3
+10:34.244	ID:1	[INFO] I'm the source, I've received an info packet from 5
+10:35.593	ID:1	[INFO] I'm the source, I've received an info packet from 15
+10:36.041	ID:1	app:Send to node 6 seqn 5
+10:36.305	ID:1	[INFO] I'm the source, I've received an info packet from 6
+10:37.265	ID:1	[INFO] I'm the source, I've received an info packet from 7
+10:37.615	ID:1	[INFO] I'm the source, I've received an info packet from 12
+10:38.658	ID:1	[INFO] I'm the source, I've received an info packet from 14
+10:39.873	ID:1	[INFO] I'm the source, I've received an info packet from 13
+11:54.471	ID:1	[INFO] RoutingTable at position 0, is 3 1 
+11:54.474	ID:1	[INFO] RoutingTable at position 1, is 6 4 
+11:54.476	ID:1	[INFO] RoutingTable at position 2, is 2 1 
+11:54.478	ID:1	[INFO] RoutingTable at position 3, is 15 4 
+11:54.481	ID:1	[INFO] RoutingTable at position 4, is 4 1 
+11:54.483	ID:1	[INFO] RoutingTable at position 5, is 9 7 
+11:54.486	ID:1	[INFO] RoutingTable at position 6, is 5 3 
+11:54.488	ID:1	[INFO] RoutingTable at position 7, is 7 4 
+11:54.491	ID:1	[INFO] RoutingTable at position 8, is 13 15 
+11:54.493	ID:1	[INFO] RoutingTable at position 9, is 14 5 
+11:54.496	ID:1	[INFO] RoutingTable at position 10, is 11 5 
+11:54.498	ID:1	[INFO] RoutingTable at position 11, is 12 4 
+11:54.501	ID:1	[INFO] RoutingTable at position 12, is 10 6 
+11:54.504	ID:1	[INFO] RoutingTable at position 13, is 8 12 
+12:19.679	ID:1	app:Send to node 10 seqn 6
+12:29.702	ID:1	[INFO] I'm the source, I've received an info packet from 4
+12:30.949	ID:1	[INFO] I'm the source, I've received an info packet from 2
+12:33.158	ID:1	[INFO] I'm the source, I've received an info packet from 5
+12:33.435	ID:1	[INFO] I'm the source, I've received an info packet from 15
+12:35.570	ID:1	[INFO] I'm the source, I've received an info packet from 3
+12:36.987	ID:1	[INFO] I'm the source, I've received an info packet from 8
+12:37.170	ID:1	[INFO] I'm the source, I've received an info packet from 9
+12:40.267	ID:1	[INFO] I'm the source, I've received an info packet from 7
+12:40.989	ID:1	[INFO] I'm the source, I've received an info packet from 13
+12:41.749	ID:1	[INFO] I'm the source, I've received an info packet from 14
+12:44.201	ID:1	[INFO] I'm the source, I've received an info packet from 11
+13:34.471	ID:1	[INFO] RoutingTable at position 0, is 3 2 
+13:34.474	ID:1	[INFO] RoutingTable at position 1, is 6 4 
+13:34.476	ID:1	[INFO] RoutingTable at position 2, is 2 1 
+13:34.478	ID:1	[INFO] RoutingTable at position 3, is 15 4 
+13:34.481	ID:1	[INFO] RoutingTable at position 4, is 4 1 
+13:34.483	ID:1	[INFO] RoutingTable at position 5, is 9 8 
+13:34.486	ID:1	[INFO] RoutingTable at position 6, is 5 4 
+13:34.488	ID:1	[INFO] RoutingTable at position 7, is 7 9 
+13:34.491	ID:1	[INFO] RoutingTable at position 8, is 13 10 
+13:34.493	ID:1	[INFO] RoutingTable at position 9, is 14 9 
+13:34.496	ID:1	[INFO] RoutingTable at position 10, is 11 14 
+13:34.498	ID:1	[INFO] RoutingTable at position 11, is 12 4 
+13:34.501	ID:1	[INFO] RoutingTable at position 12, is 10 6 
+13:34.504	ID:1	[INFO] RoutingTable at position 13, is 8 12 
+13:54.271	ID:1	app:Send to node 14 seqn 7
+14:32.249	ID:1	[INFO] I'm the source, I've received an info packet from 7
+14:33.191	ID:1	[INFO] I'm the source, I've received an info packet from 5
+14:33.642	ID:1	[INFO] I'm the source, I've received an info packet from 12
+14:33.911	ID:1	[INFO] I'm the source, I've received an info packet from 11
+14:34.453	ID:1	[INFO] I'm the source, I've received an info packet from 4
+14:35.628	ID:1	[INFO] I'm the source, I've received an info packet from 6
+14:36.106	ID:1	[INFO] I'm the source, I've received an info packet from 14
+14:38.970	ID:1	[INFO] I'm the source, I've received an info packet from 15
+14:39.057	ID:1	[INFO] I'm the source, I've received an info packet from 2
+14:39.071	ID:4	ERROR CAN NOT SEND INFO BEACON WITH CHILD 3 AND FATHER 5 I'M 4 RESCHEDULING
+14:39.513	ID:1	[INFO] I'm the source, I've received an info packet from 10
+14:40.806	ID:1	[INFO] I'm the source, I've received an info packet from 13
+14:40.932	ID:1	[INFO] I'm the source, I've received an info packet from 9
+14:41.580	ID:1	[INFO] I'm the source, I've received an info packet from 3
+15:14.471	ID:1	[INFO] RoutingTable at position 0, is 3 5 
+15:14.474	ID:1	[INFO] RoutingTable at position 1, is 6 4 
+15:14.476	ID:1	[INFO] RoutingTable at position 2, is 2 5 
+15:14.479	ID:1	[INFO] RoutingTable at position 3, is 15 12 
+15:14.481	ID:1	[INFO] RoutingTable at position 4, is 4 1 
+15:14.483	ID:1	[INFO] RoutingTable at position 5, is 9 11 
+15:14.486	ID:1	[INFO] RoutingTable at position 6, is 5 4 
+15:14.488	ID:1	[INFO] RoutingTable at position 7, is 7 4 
+15:14.491	ID:1	[INFO] RoutingTable at position 8, is 13 8 
+15:14.493	ID:1	[INFO] RoutingTable at position 9, is 14 5 
+15:14.496	ID:1	[INFO] RoutingTable at position 10, is 11 7 
+15:14.498	ID:1	[INFO] RoutingTable at position 11, is 12 6 
+15:14.501	ID:1	[INFO] RoutingTable at position 12, is 10 11 
+15:14.504	ID:1	[INFO] RoutingTable at position 13, is 8 12 
+15:22.146	ID:1	app:Send to node 13 seqn 8
+16:33.103	ID:1	[INFO] I'm the source, I've received an info packet from 7
+16:33.538	ID:1	[INFO] I'm the source, I've received an info packet from 2
+16:33.757	ID:1	[INFO] I'm the source, I've received an info packet from 12
+16:33.921	ID:1	[INFO] I'm the source, I've received an info packet from 4
+16:34.247	ID:1	[INFO] I'm the source, I've received an info packet from 3
+16:34.473	ID:1	[INFO] I'm the source, I've received an info packet from 14
+16:34.842	ID:1	[INFO] I'm the source, I've received an info packet from 5
+16:34.866	ID:1	[INFO] I'm the source, I've received an info packet from 6
+16:35.637	ID:1	[INFO] I'm the source, I've received an info packet from 13
+16:36.299	ID:1	[INFO] I'm the source, I've received an info packet from 15
+16:36.654	ID:1	[INFO] I'm the source, I've received an info packet from 8
+16:37.455	ID:1	[INFO] I'm the source, I've received an info packet from 11
+16:54.471	ID:1	[INFO] RoutingTable at position 0, is 3 2 
+16:54.474	ID:1	[INFO] RoutingTable at position 1, is 6 2 
+16:54.476	ID:1	[INFO] RoutingTable at position 2, is 2 1 
+16:54.478	ID:1	[INFO] RoutingTable at position 3, is 15 6 
+16:54.481	ID:1	[INFO] RoutingTable at position 4, is 4 2 
+16:54.483	ID:1	[INFO] RoutingTable at position 5, is 9 11 
+16:54.486	ID:1	[INFO] RoutingTable at position 6, is 5 2 
+16:54.488	ID:1	[INFO] RoutingTable at position 7, is 7 6 
+16:54.491	ID:1	[INFO] RoutingTable at position 8, is 13 8 
+16:54.493	ID:1	[INFO] RoutingTable at position 9, is 14 5 
+16:54.496	ID:1	[INFO] RoutingTable at position 10, is 11 5 
+16:54.498	ID:1	[INFO] RoutingTable at position 11, is 12 6 
+16:54.501	ID:1	[INFO] RoutingTable at position 12, is 10 11 
+16:54.504	ID:1	[INFO] RoutingTable at position 13, is 8 6 
+17:32.981	ID:1	app:Send to node 7 seqn 9
+17:32.994	ID:2	[INFO] Received a packet from the sink, the destination is 7 
+17:33.032	ID:6	[INFO] Received a packet from the sink, the destination is 7 
+17:33.042	ID:7	[INFO] Received a packet from the sink, the destination is 7 
+17:33.043	ID:7	app:Recv from sink seqn 9
+18:30.508	ID:1	[INFO] I'm the source, I've received an info packet from 2
+18:32.094	ID:1	[INFO] I'm the source, I've received an info packet from 3
+18:33.275	ID:1	[INFO] I'm the source, I've received an info packet from 4
+18:33.435	ID:1	[INFO] I'm the source, I've received an info packet from 14
+18:34.122	ID:1	[INFO] I'm the source, I've received an info packet from 5
+18:34.183	ID:1	[INFO] I'm the source, I've received an info packet from 15
+18:34.471	ID:1	[INFO] RoutingTable at position 0, is 3 1 
+18:34.474	ID:1	[INFO] RoutingTable at position 1, is 6 2 
+18:34.476	ID:1	[INFO] RoutingTable at position 2, is 2 1 
+18:34.478	ID:1	[INFO] RoutingTable at position 3, is 15 4 
+18:34.481	ID:1	[INFO] RoutingTable at position 4, is 4 1 
+18:34.483	ID:1	[INFO] RoutingTable at position 5, is 9 11 
+18:34.486	ID:1	[INFO] RoutingTable at position 6, is 5 3 
+18:34.488	ID:1	[INFO] RoutingTable at position 7, is 7 6 
+18:34.491	ID:1	[INFO] RoutingTable at position 8, is 13 8 
+18:34.493	ID:1	[INFO] RoutingTable at position 9, is 14 3 
+18:34.496	ID:1	[INFO] RoutingTable at position 10, is 11 5 
+18:34.498	ID:1	[INFO] RoutingTable at position 11, is 12 6 
+18:34.501	ID:1	[INFO] RoutingTable at position 12, is 10 11 
+18:34.504	ID:1	[INFO] RoutingTable at position 13, is 8 6 
+18:36.345	ID:1	[INFO] I'm the source, I've received an info packet from 12
+18:36.437	ID:1	[INFO] I'm the source, I've received an info packet from 7
+18:36.703	ID:1	[INFO] I'm the source, I've received an info packet from 8
+18:36.745	ID:1	[INFO] I'm the source, I've received an info packet from 6
+18:36.985	ID:1	[INFO] I'm the source, I've received an info packet from 10
+18:37.503	ID:1	[INFO] I'm the source, I've received an info packet from 9
+18:37.868	ID:1	[INFO] I'm the source, I've received an info packet from 11
+18:37.971	ID:1	[INFO] I'm the source, I've received an info packet from 13
+20:14.472	ID:1	[INFO] RoutingTable at position 0, is 3 1 
+20:14.474	ID:1	[INFO] RoutingTable at position 1, is 6 4 
+20:14.476	ID:1	[INFO] RoutingTable at position 2, is 2 1 
+20:14.479	ID:1	[INFO] RoutingTable at position 3, is 15 4 
+20:14.481	ID:1	[INFO] RoutingTable at position 4, is 4 1 
+20:14.484	ID:1	[INFO] RoutingTable at position 5, is 9 14 
+20:14.486	ID:1	[INFO] RoutingTable at position 6, is 5 3 
+20:14.489	ID:1	[INFO] RoutingTable at position 7, is 7 6 
+20:14.491	ID:1	[INFO] RoutingTable at position 8, is 13 8 
+20:14.494	ID:1	[INFO] RoutingTable at position 9, is 14 3 
+20:14.496	ID:1	[INFO] RoutingTable at position 10, is 11 14 
+20:14.499	ID:1	[INFO] RoutingTable at position 11, is 12 6 
+20:14.502	ID:1	[INFO] RoutingTable at position 12, is 10 6 
+20:14.504	ID:1	[INFO] RoutingTable at position 13, is 8 6 
+20:29.953	ID:1	[INFO] I'm the source, I've received an info packet from 2
+20:31.521	ID:1	[INFO] I'm the source, I've received an info packet from 3
+20:31.762	ID:1	[INFO] I'm the source, I've received an info packet from 14
+20:33.306	ID:1	[INFO] I'm the source, I've received an info packet from 5
+20:33.485	ID:1	[INFO] I'm the source, I've received an info packet from 15
+20:33.701	ID:1	[INFO] I'm the source, I've received an info packet from 7
+20:35.225	ID:1	[INFO] I'm the source, I've received an info packet from 12
+20:36.237	ID:1	[INFO] I'm the source, I've received an info packet from 4
+20:36.764	ID:1	[INFO] I'm the source, I've received an info packet from 8
+20:36.950	ID:1	[INFO] I'm the source, I've received an info packet from 6
+20:37.147	ID:1	[INFO] I'm the source, I've received an info packet from 13
+20:37.423	ID:1	[INFO] I'm the source, I've received an info packet from 11
+20:39.490	ID:1	[INFO] I'm the source, I've received an info packet from 9
+21:54.471	ID:1	[INFO] RoutingTable at position 0, is 3 1 
+21:54.474	ID:1	[INFO] RoutingTable at position 1, is 6 4 
+21:54.476	ID:1	[INFO] RoutingTable at position 2, is 2 1 
+21:54.478	ID:1	[INFO] RoutingTable at position 3, is 15 4 
+21:54.481	ID:1	[INFO] RoutingTable at position 4, is 4 2 
+21:54.483	ID:1	[INFO] RoutingTable at position 5, is 9 14 
+21:54.486	ID:1	[INFO] RoutingTable at position 6, is 5 3 
+21:54.488	ID:1	[INFO] RoutingTable at position 7, is 7 5 
+21:54.491	ID:1	[INFO] RoutingTable at position 8, is 13 12 
+21:54.493	ID:1	[INFO] RoutingTable at position 9, is 14 3 
+21:54.496	ID:1	[INFO] RoutingTable at position 10, is 11 14 
+21:54.499	ID:1	[INFO] RoutingTable at position 11, is 12 4 
+21:54.501	ID:1	[INFO] RoutingTable at position 12, is 10 6 
+21:54.504	ID:1	[INFO] RoutingTable at position 13, is 8 7 
+22:32.347	ID:1	[INFO] I'm the source, I've received an info packet from 3
+22:33.235	ID:1	[INFO] I'm the source, I've received an info packet from 2
+22:33.476	ID:1	[INFO] I'm the source, I've received an info packet from 4
+22:33.918	ID:1	[INFO] I'm the source, I've received an info packet from 5
+22:34.304	ID:1	[INFO] I'm the source, I've received an info packet from 14
+22:35.350	ID:1	[INFO] I'm the source, I've received an info packet from 11
+22:36.421	ID:1	[INFO] I'm the source, I've received an info packet from 7
+22:36.892	ID:1	[INFO] I'm the source, I've received an info packet from 10
+22:38.896	ID:1	[INFO] I'm the source, I've received an info packet from 13

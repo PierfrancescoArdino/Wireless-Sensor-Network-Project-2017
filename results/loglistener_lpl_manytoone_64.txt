@@ -1,0 +1,239 @@
+00:32.127	ID:1	[INFO] I'm the source, I've received an info packet from 6
+00:32.553	ID:4	ERROR CAN NOT SEND INFO BEACON WITH CHILD 4 AND FATHER 1 I'M 4 RESCHEDULING
+00:33.853	ID:1	[INFO] I'm the source, I've received an info packet from 2
+00:36.996	ID:1	[INFO] I'm the source, I've received an info packet from 14
+00:40.366	ID:1	[INFO] I'm the source, I've received an info packet from 11
+01:18.586	ID:11	app:Send to sink seqn 0
+01:21.226	ID:8	app:Send to sink seqn 0
+01:22.095	ID:12	app:Send to sink seqn 0
+01:24.153	ID:3	app:Send to sink seqn 0
+01:24.287	ID:1	app:Recv from 3 seqn 0
+01:24.717	ID:13	app:Send to sink seqn 0
+01:24.737	ID:6	app:Send to sink seqn 0
+01:24.936	ID:1	app:Recv from 13 seqn 0
+01:29.652	ID:9	app:Send to sink seqn 0
+01:31.208	ID:4	app:Send to sink seqn 0
+01:31.219	ID:1	app:Recv from 4 seqn 0
+01:40.780	ID:5	app:Send to sink seqn 0
+01:40.794	ID:1	app:Recv from 5 seqn 0
+01:44.613	ID:10	app:Send to sink seqn 0
+01:50.397	ID:14	app:Send to sink seqn 0
+01:50.576	ID:1	app:Recv from 14 seqn 0
+01:54.471	ID:1	[INFO] RoutingTable at position 0, is 6 4 
+01:54.474	ID:1	[INFO] RoutingTable at position 1, is 2 1 
+01:54.476	ID:1	[INFO] RoutingTable at position 2, is 14 3 
+01:54.479	ID:1	[INFO] RoutingTable at position 3, is 11 14 
+01:55.402	ID:15	app:Send to sink seqn 0
+01:59.595	ID:2	app:Send to sink seqn 0
+01:59.637	ID:1	app:Recv from 2 seqn 0
+02:01.711	ID:7	app:Send to sink seqn 0
+02:01.929	ID:1	app:Recv from 7 seqn 0
+02:14.792	ID:7	app:Send to sink seqn 1
+02:16.365	ID:4	app:Send to sink seqn 1
+02:16.489	ID:1	app:Recv from 4 seqn 1
+02:19.475	ID:3	app:Send to sink seqn 1
+02:19.485	ID:2	app:Send to sink seqn 1
+02:19.572	ID:1	app:Recv from 2 seqn 1
+02:19.577	ID:1	app:Recv from 3 seqn 1
+02:21.502	ID:8	app:Send to sink seqn 1
+02:21.639	ID:10	app:Send to sink seqn 1
+02:21.874	ID:1	app:Recv from 8 seqn 1
+02:23.992	ID:12	app:Send to sink seqn 1
+02:24.311	ID:1	app:Recv from 12 seqn 1
+02:25.074	ID:13	app:Send to sink seqn 1
+02:25.253	ID:1	app:Recv from 13 seqn 1
+02:29.894	ID:1	[INFO] I'm the source, I've received an info packet from 3
+02:31.263	ID:1	[INFO] I'm the source, I've received an info packet from 2
+02:33.349	ID:1	[INFO] I'm the source, I've received an info packet from 4
+02:33.418	ID:6	ERROR CAN NOT SEND INFO BEACON WITH CHILD 6 AND FATHER 2 I'M 6 RESCHEDULING
+02:33.574	ID:1	[INFO] I'm the source, I've received an info packet from 6
+02:34.977	ID:6	ERROR CAN NOT SEND INFO BEACON WITH CHILD 11 AND FATHER 6 I'M 6 RESCHEDULING
+02:36.728	ID:1	[INFO] I'm the source, I've received an info packet from 14
+02:37.241	ID:6	ERROR CAN NOT SEND INFO BEACON WITH CHILD 7 AND FATHER 6 I'M 6 RESCHEDULING
+02:37.739	ID:1	[INFO] I'm the source, I've received an info packet from 10
+02:38.820	ID:1	[INFO] I'm the source, I've received an info packet from 13
+02:41.612	ID:1	[INFO] I'm the source, I've received an info packet from 9
+02:42.357	ID:14	app:Send to sink seqn 1
+02:42.378	ID:6	app:Send to sink seqn 1
+02:42.617	ID:1	app:Recv from 14 seqn 1
+02:47.936	ID:15	app:Send to sink seqn 1
+02:49.133	ID:11	app:Send to sink seqn 1
+02:53.703	ID:9	app:Send to sink seqn 1
+03:01.126	ID:5	app:Send to sink seqn 1
+03:01.317	ID:1	app:Recv from 5 seqn 1
+03:18.624	ID:5	app:Send to sink seqn 2
+03:18.793	ID:1	app:Recv from 5 seqn 2
+03:19.404	ID:3	app:Send to sink seqn 2
+03:19.515	ID:1	app:Recv from 3 seqn 2
+03:21.021	ID:13	app:Send to sink seqn 2
+03:22.094	ID:11	app:Send to sink seqn 2
+03:22.235	ID:1	app:Recv from 11 seqn 2
+03:22.856	ID:10	app:Send to sink seqn 2
+03:24.695	ID:9	app:Send to sink seqn 2
+03:24.926	ID:15	app:Send to sink seqn 2
+03:25.840	ID:1	app:Recv from 15 seqn 2
+03:30.275	ID:6	app:Send to sink seqn 2
+03:30.345	ID:1	app:Recv from 6 seqn 2
+03:34.471	ID:1	[INFO] RoutingTable at position 0, is 6 2 
+03:34.474	ID:1	[INFO] RoutingTable at position 1, is 2 1 
+03:34.476	ID:1	[INFO] RoutingTable at position 2, is 14 5 
+03:34.479	ID:1	[INFO] RoutingTable at position 3, is 11 14 
+03:34.481	ID:1	[INFO] RoutingTable at position 4, is 3 1 
+03:34.483	ID:1	[INFO] RoutingTable at position 5, is 4 2 
+03:34.486	ID:1	[INFO] RoutingTable at position 6, is 10 8 
+03:34.488	ID:1	[INFO] RoutingTable at position 7, is 13 8 
+03:34.491	ID:1	[INFO] RoutingTable at position 8, is 9 7 
+03:36.879	ID:8	app:Send to sink seqn 2
+03:37.141	ID:1	app:Recv from 8 seqn 2
+03:44.182	ID:7	app:Send to sink seqn 2
+03:45.964	ID:4	app:Send to sink seqn 2
+03:46.288	ID:12	app:Send to sink seqn 2
+03:46.353	ID:1	app:Recv from 4 seqn 2
+03:46.363	ID:1	app:Recv from 12 seqn 2
+03:50.885	ID:14	app:Send to sink seqn 2
+03:51.145	ID:1	app:Recv from 14 seqn 2
+04:01.243	ID:2	app:Send to sink seqn 2
+04:01.274	ID:1	app:Recv from 2 seqn 2
+04:15.390	ID:5	app:Send to sink seqn 3
+04:15.493	ID:1	app:Recv from 5 seqn 3
+04:17.673	ID:11	app:Send to sink seqn 3
+04:18.597	ID:12	app:Send to sink seqn 3
+04:19.946	ID:10	app:Send to sink seqn 3
+04:21.979	ID:2	app:Send to sink seqn 3
+04:22.166	ID:1	app:Recv from 2 seqn 3
+04:25.686	ID:9	app:Send to sink seqn 3
+04:25.959	ID:1	app:Recv from 9 seqn 3
+04:26.235	ID:6	app:Send to sink seqn 3
+04:26.538	ID:1	app:Recv from 6 seqn 3
+04:30.328	ID:1	[INFO] I'm the source, I've received an info packet from 2
+04:33.666	ID:3	ERROR CAN NOT SEND INFO BEACON WITH CHILD 14 AND FATHER 3 I'M 3 RESCHEDULING
+04:33.762	ID:1	[INFO] I'm the source, I've received an info packet from 14
+04:34.983	ID:1	[INFO] I'm the source, I've received an info packet from 14
+04:36.632	ID:1	[INFO] I'm the source, I've received an info packet from 7
+04:36.859	ID:1	[INFO] I'm the source, I've received an info packet from 4
+04:37.114	ID:8	app:Send to sink seqn 3
+04:37.436	ID:1	app:Recv from 8 seqn 3
+04:38.559	ID:7	app:Send to sink seqn 3
+04:38.948	ID:1	[INFO] I'm the source, I've received an info packet from 9
+04:38.954	ID:1	[INFO] I'm the source, I've received an info packet from 6
+04:39.390	ID:1	[INFO] I'm the source, I've received an info packet from 13
+04:40.257	ID:1	[INFO] I'm the source, I've received an info packet from 8
+04:40.262	ID:1	[INFO] I'm the source, I've received an info packet from 12
+04:42.516	ID:13	app:Send to sink seqn 3
+04:43.050	ID:1	[INFO] I'm the source, I've received an info packet from 15
+04:43.054	ID:1	app:Recv from 13 seqn 3
+04:49.412	ID:14	app:Send to sink seqn 3
+05:02.901	ID:4	app:Send to sink seqn 3
+05:02.959	ID:1	app:Recv from 4 seqn 3
+05:03.695	ID:3	app:Send to sink seqn 3
+05:03.826	ID:1	app:Recv from 3 seqn 3
+05:04.208	ID:15	app:Send to sink seqn 3
+05:14.471	ID:1	[INFO] RoutingTable at position 0, is 6 4 
+05:14.474	ID:1	[INFO] RoutingTable at position 1, is 2 1 
+05:14.476	ID:1	[INFO] RoutingTable at position 2, is 14 3 
+05:14.479	ID:1	[INFO] RoutingTable at position 3, is 11 14 
+05:14.481	ID:1	[INFO] RoutingTable at position 4, is 3 1 
+05:14.483	ID:1	[INFO] RoutingTable at position 5, is 4 2 
+05:14.486	ID:1	[INFO] RoutingTable at position 6, is 10 8 
+05:14.489	ID:1	[INFO] RoutingTable at position 7, is 13 12 
+05:14.491	ID:1	[INFO] RoutingTable at position 8, is 9 14 
+05:14.493	ID:1	[INFO] RoutingTable at position 9, is 7 5 
+05:14.496	ID:1	[INFO] RoutingTable at position 10, is 8 7 
+05:14.499	ID:1	[INFO] RoutingTable at position 11, is 12 4 
+05:14.501	ID:1	[INFO] RoutingTable at position 12, is 15 12 
+05:16.089	ID:12	app:Send to sink seqn 4
+05:16.380	ID:1	app:Recv from 12 seqn 4
+05:17.937	ID:6	app:Send to sink seqn 4
+05:18.388	ID:1	app:Recv from 6 seqn 4
+05:18.849	ID:14	app:Send to sink seqn 4
+05:19.889	ID:3	app:Send to sink seqn 4
+05:20.128	ID:1	app:Recv from 3 seqn 4
+05:22.149	ID:10	app:Send to sink seqn 4
+05:22.495	ID:1	app:Recv from 10 seqn 4
+05:23.406	ID:7	app:Send to sink seqn 4
+05:23.652	ID:1	app:Recv from 7 seqn 4
+05:25.185	ID:2	app:Send to sink seqn 4
+05:25.239	ID:1	app:Recv from 2 seqn 4
+05:25.651	ID:5	app:Send to sink seqn 4
+05:25.894	ID:1	app:Recv from 5 seqn 4
+05:27.406	ID:13	app:Send to sink seqn 4
+05:27.685	ID:1	app:Recv from 13 seqn 4
+05:33.706	ID:4	app:Send to sink seqn 4
+05:33.831	ID:1	app:Recv from 4 seqn 4
+05:36.251	ID:8	app:Send to sink seqn 4
+05:36.409	ID:1	app:Recv from 8 seqn 4
+05:52.628	ID:15	app:Send to sink seqn 4
+05:53.101	ID:1	app:Recv from 15 seqn 4
+05:53.607	ID:9	app:Send to sink seqn 4
+05:54.388	ID:11	app:Send to sink seqn 4
+05:54.680	ID:1	app:Recv from 11 seqn 4
+06:15.767	ID:8	app:Send to sink seqn 5
+06:21.488	ID:7	app:Send to sink seqn 5
+06:25.942	ID:3	app:Send to sink seqn 5
+06:26.137	ID:1	app:Recv from 3 seqn 5
+06:27.915	ID:9	app:Send to sink seqn 5
+06:28.147	ID:1	app:Recv from 9 seqn 5
+06:28.425	ID:6	app:Send to sink seqn 5
+06:28.583	ID:1	app:Recv from 6 seqn 5
+06:30.683	ID:5	app:Send to sink seqn 5
+06:31.095	ID:1	app:Recv from 5 seqn 5
+06:31.461	ID:1	[INFO] I'm the source, I've received an info packet from 4
+06:32.327	ID:1	[INFO] I'm the source, I've received an info packet from 2
+06:32.836	ID:1	[INFO] I'm the source, I've received an info packet from 3
+06:34.199	ID:1	[INFO] I'm the source, I've received an info packet from 8
+06:35.207	ID:1	[INFO] I'm the source, I've received an info packet from 5
+06:35.857	ID:1	[INFO] I'm the source, I've received an info packet from 12
+06:35.907	ID:4	ERROR CAN NOT SEND INFO BEACON WITH CHILD 15 AND FATHER 12 I'M 4 RESCHEDULING
+06:35.936	ID:4	ERROR CAN NOT SEND INFO BEACON WITH CHILD 7 AND FATHER 6 I'M 4 RESCHEDULING
+06:36.921	ID:13	app:Send to sink seqn 5
+06:38.941	ID:1	[INFO] I'm the source, I've received an info packet from 7
+06:39.448	ID:1	[INFO] I'm the source, I've received an info packet from 9
+06:46.530	ID:2	app:Send to sink seqn 5
+06:46.583	ID:1	app:Recv from 2 seqn 5
+06:47.459	ID:10	app:Send to sink seqn 5
+06:47.606	ID:14	app:Send to sink seqn 5
+06:50.159	ID:1	app:Recv from 10 seqn 5
+06:54.471	ID:1	[INFO] RoutingTable at position 0, is 6 4 
+06:54.474	ID:1	[INFO] RoutingTable at position 1, is 2 1 
+06:54.476	ID:1	[INFO] RoutingTable at position 2, is 14 3 
+06:54.479	ID:1	[INFO] RoutingTable at position 3, is 11 14 
+06:54.481	ID:1	[INFO] RoutingTable at position 4, is 3 1 
+06:54.483	ID:1	[INFO] RoutingTable at position 5, is 4 1 
+06:54.486	ID:1	[INFO] RoutingTable at position 6, is 10 8 
+06:54.489	ID:1	[INFO] RoutingTable at position 7, is 13 12 
+06:54.491	ID:1	[INFO] RoutingTable at position 8, is 9 14 
+06:54.493	ID:1	[INFO] RoutingTable at position 9, is 7 6 
+06:54.496	ID:1	[INFO] RoutingTable at position 10, is 8 12 
+06:54.499	ID:1	[INFO] RoutingTable at position 11, is 12 4 
+06:54.501	ID:1	[INFO] RoutingTable at position 12, is 15 12 
+06:54.504	ID:1	[INFO] RoutingTable at position 13, is 5 3 
+06:55.016	ID:15	app:Send to sink seqn 5
+06:55.299	ID:1	app:Recv from 15 seqn 5
+06:55.893	ID:12	app:Send to sink seqn 5
+06:56.093	ID:1	app:Recv from 12 seqn 5
+06:56.752	ID:4	app:Send to sink seqn 5
+06:56.816	ID:1	app:Recv from 4 seqn 5
+06:59.767	ID:11	app:Send to sink seqn 5
+07:00.103	ID:1	app:Recv from 11 seqn 5
+07:15.906	ID:5	app:Send to sink seqn 6
+07:16.019	ID:1	app:Recv from 5 seqn 6
+07:19.552	ID:12	app:Send to sink seqn 6
+07:19.887	ID:1	app:Recv from 12 seqn 6
+07:20.166	ID:11	app:Send to sink seqn 6
+07:25.263	ID:3	app:Send to sink seqn 6
+07:25.315	ID:1	app:Recv from 3 seqn 6
+07:25.417	ID:2	app:Send to sink seqn 6
+07:25.470	ID:1	app:Recv from 2 seqn 6
+07:27.621	ID:9	app:Send to sink seqn 6
+07:27.773	ID:1	app:Recv from 9 seqn 6
+07:28.008	ID:14	app:Send to sink seqn 6
+07:28.213	ID:1	app:Recv from 14 seqn 6
+07:31.463	ID:13	app:Send to sink seqn 6
+07:32.228	ID:1	app:Recv from 13 seqn 6
+07:33.392	ID:6	app:Send to sink seqn 6
+07:36.742	ID:10	app:Send to sink seqn 6
+07:41.464	ID:7	app:Send to sink seqn 6
+07:51.257	ID:4	app:Send to sink seqn 6
+07:51.483	ID:1	app:Recv from 4 seqn 6
+07:55.610	ID:8	app:Send to sink seqn 6
+07:58.136	ID:15	app:Send to sink seqn 6
