@@ -36,7 +36,6 @@ implementation
 	event void Boot.booted() {
 		call AMControl.start();
 		call LPL.setLocalWakeupInterval(LPL_DEF_REMOTE_WAKEUP);
-		call PacketLink.setRetries(&data_output, NUM_RETRIES);
 	}
 
 	event void AMControl.startDone(error_t err) {
@@ -52,12 +51,14 @@ implementation
 		uint8_t *pathToDestNode = call Routing.getDestinationRoute(destNode);
 		DataFromSink* destData = call DataFromSinkSend.getPayload(&data_output, sizeof(DataFromSink));
 		if(pathToDestNode==NULL)
+		{
+			printf("[ERROR] Path to %d not found\n",destNode);
 			return;
+		}
   		destData -> data = *d;
   		destData -> finalDest = destNode;
 		for (i=0;i<MAX_ROUTE_LENGTH;i++) {
 				destData -> destRoute[i] = pathToDestNode[i];
-			
 		}
 		if(sending_data)
 		{
@@ -80,6 +81,7 @@ implementation
   //		destData -> destRoute = data -> destRoute;
   		memcpy(destData -> destRoute, data -> destRoute, sizeof(data->destRoute[0])*MAX_ROUTE_LENGTH);
 		//printf("[DEBUG] Forwarding target pakcet for %d to %d\n",netCollData -> finalDestination,netCollData -> route[0]);
+		call PacketLink.setRetries(&data_output, NUM_RETRIES);
   		status = call DataFromSinkSend.send(destData -> destRoute[0] , &data_output, sizeof(DataFromSink));
   		if(status != SUCCESS) {
 			printf("[ERROR] Send DataFromSink failed, retrying soon...\n");

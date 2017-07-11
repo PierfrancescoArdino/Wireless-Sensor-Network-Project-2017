@@ -43,7 +43,7 @@ implementation
 	}
 
 	event void JitterTimer.fired() {
-		if(data.seqn<100)
+		if(data.seqn<200)
 		{
 			if(TOS_NODE_ID == 1){
 				uint8_t destNode = call Routing.getRandomNode();
