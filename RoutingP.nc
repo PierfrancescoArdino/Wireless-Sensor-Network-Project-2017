@@ -17,7 +17,7 @@ module RoutingP {
     interface AMPacket;
 	interface PacketLink;
     interface AMSend as BeaconSend;
-	interface AMSend as InfoToRootSend; 
+	interface AMSend as InfoToRootSend;
     interface Receive as BeaconReceive;
 	interface Receive as InfoToRootReceiver;
     interface CC2420Packet;
@@ -28,19 +28,19 @@ module RoutingP {
 }
 
 implementation {
-	
+
 #define NUM_RETRIES 3
 #define RSSI_THRESHOLD (-90)
-#define REBUILD_PERIOD (120*1024L) //exactly 120 seconds, 1024 ticks per second in TinyOS 
+#define REBUILD_PERIOD (120*1024L) //exactly 120 seconds, 1024 ticks per second in TinyOS
 #define PRINTROUTINGTABLE_PERIOD (100*1024L)
 #define MAX_METRIC 65535U
 #define MAX_NODES 30
 #define MAX_ROUTE_LENGTH 30
 #define BEACON_PERIOD (120*1024L)
-#define BEACON_REPEAT_RESCHEDULING (3*1024L)           
-#define BEACON_REPEAT_PERIOD (1*1024L)           
+#define BEACON_REPEAT_RESCHEDULING (3*1024L)
+#define BEACON_REPEAT_PERIOD (1*1024L)
 #define BEACON_INFO_TIME (15*1024L)
-#define BEACON_INFO_RESCHEDULING (5*1024L)	
+#define BEACON_INFO_RESCHEDULING (5*1024L)
 message_t beacon_output;
 message_t data_output;
 message_t info_output;
@@ -51,10 +51,10 @@ bool i_am_sink;
 uint8_t path[MAX_ROUTE_LENGTH];
 uint16_t current_seq_no;
 uint16_t current_parent;
-uint16_t current_hops_to_sink = MAX_METRIC; 
+uint16_t current_hops_to_sink = MAX_METRIC;
 uint16_t num_received;
 uint8_t routingTableIndex;
-int current_rssi_to_parent; 
+int current_rssi_to_parent;
 RoutingTableStruct routingTable[MAX_NODES];
 RoutingTableStruct infoBeaconToReschedule;
 bool checkIfNodeInroutingTable(uint8_t child, uint8_t father);
@@ -110,7 +110,7 @@ command uint8_t* Routing.getDestinationRoute(uint8_t destinationNode)
 		if(hop > MAX_ROUTE_LENGTH){
 			printf("[INFO] The path is too long\n");
 			return NULL;
-		}	
+		}
 	}while(currDest!=1);
 	i=hop-2;
 	j=0;
@@ -120,7 +120,7 @@ command uint8_t* Routing.getDestinationRoute(uint8_t destinationNode)
 		temp = reversePath[i];
 		path[j] = temp;
 		i--;
-		j++;	
+		j++;
 	}
 	return path;
 }
@@ -144,7 +144,7 @@ task void send_beacon(){
 		if (err == SUCCESS){
 			call Leds.led2On();
 			sending_beacon = TRUE;
-		} 
+		}
 		else {
 	//		printf("routing:\n\n\n\nERROR %u\n", err);
 			// retry after a random time
@@ -179,21 +179,20 @@ event void InfoToRootSend.sendDone(message_t* msg, error_t error)
 {
 	if (error == TRUE)
 	{
-		printf("SEND DONE FAILED I'M NODE %d and my parent is %d\n", TOS_NODE_ID, current_parent); 
+		printf("SEND DONE FAILED I'M NODE %d and my parent is %d\n", TOS_NODE_ID, current_parent);
 	}
 	sending_info = FALSE;
-	//TODO: implement send done, check if send done succeded
 }
 int getRssi(message_t* msg){
-	int rssi = (int8_t)call CC2420Packet.getRssi(msg) - 45; 
+	int rssi = (int8_t)call CC2420Packet.getRssi(msg) - 45;
 	// or CC2420Packet.getLqi(msg);
 	return rssi;
 }
 
 void updateParent(uint16_t new_parent, uint16_t new_hops_to_sink, int new_rssi_to_parent) {
     current_parent=new_parent;
-    current_hops_to_sink=new_hops_to_sink; 
-    current_rssi_to_parent=new_rssi_to_parent; 
+    current_hops_to_sink=new_hops_to_sink;
+    current_rssi_to_parent=new_rssi_to_parent;
    // printf("routing:NEW PARENT %u COST %u RSSI %d\n", current_parent, current_hops_to_sink, current_rssi_to_parent );
     // Inform neighboring nodes after a random time
     call InfoTimer.startOneShot(BEACON_INFO_TIME + (call Random.rand16()) % BEACON_INFO_RESCHEDULING);
@@ -216,7 +215,7 @@ int compare_seqn(uint8_t a, uint8_t b) {
 	else if (d > 250)  // the difference is in range [-5; -1]: considering it as an old beacon
 		return -1;
 	else
-		return 1; 	   // considering the difference positive in range [0; 250]                          
+		return 1; 	   // considering the difference positive in range [0; 250]
 }
 
 bool checkIfNodeInRoutingTable(uint8_t child, uint8_t father)
@@ -239,7 +238,7 @@ void updateRoutingTable(uint8_t child, uint8_t father)
 		{
 			routingTable[i].childAddress = child;
 			routingTable[i].parentAddress = father;
-		}			
+		}
 	}
 }
 
@@ -288,7 +287,7 @@ event message_t* InfoToRootReceiver.receive(message_t*msg, void* payload, uint8_
 event message_t* BeaconReceive.receive(message_t* msg, void* payload, uint8_t len) {
 	if (i_am_sink)
 		return msg; // ignore all incoming beacons on the sink
-	
+
     if (len == sizeof(CollectionBeacon)) {
       int cmp;
       uint16_t hops_to_sink_through_sender;
@@ -297,31 +296,31 @@ event message_t* BeaconReceive.receive(message_t* msg, void* payload, uint8_t le
 	  CollectionBeacon* beacon = (CollectionBeacon*) payload;
 	  if (beacon->metric >= MAX_METRIC)
 		  return msg; // otherwise it will wrap to zero
-	  
+
       hops_to_sink_through_sender = beacon->metric + 1;
       rssi_to_sender = getRssi(msg);
       num_received++;
-     // printf("routing:Received beacon from %u seqn %u hops %u RSSI %d\n", call AMPacket.source(msg), beacon->seq_no, hops_to_sink_through_sender, rssi_to_sender); 
+     // printf("routing:Received beacon from %u seqn %u hops %u RSSI %d\n", call AMPacket.source(msg), beacon->seq_no, hops_to_sink_through_sender, rssi_to_sender);
 
 	  if (rssi_to_sender < RSSI_THRESHOLD) {
-	//	printf("routing:Ignoring the beacon, too weak signal\n"); 
+	//	printf("routing:Ignoring the beacon, too weak signal\n");
 	  	return msg;
 	  }
-	  
-      cmp = compare_seqn(current_seq_no, beacon->seq_no); 
+
+      cmp = compare_seqn(current_seq_no, beacon->seq_no);
 	  if  (cmp < 0) // old seq_no, ignoring it
-        return msg; 
+        return msg;
 	  else if (cmp > 0){ // newer seq_no, we are rebuilding the tree
-       // printf("routing:New seqn: rebuilding the tree\n"); 
+       // printf("routing:New seqn: rebuilding the tree\n");
         current_seq_no = beacon->seq_no;
         updateParent(call AMPacket.source(msg), hops_to_sink_through_sender, rssi_to_sender);
       } else { /* same seq_no */
        if (current_hops_to_sink > hops_to_sink_through_sender){
-         // printf("routing:Same seqn, found a parent with a better metric\n"); 
+         // printf("routing:Same seqn, found a parent with a better metric\n");
           updateParent(call AMPacket.source(msg), hops_to_sink_through_sender, rssi_to_sender);
         }
         else if ((current_hops_to_sink == hops_to_sink_through_sender) && (current_rssi_to_parent < rssi_to_sender)){
-         // printf("routing:Same seqn, found a parent with the same metric but better RSSI\n"); 
+         // printf("routing:Same seqn, found a parent with the same metric but better RSSI\n");
            updateParent(call AMPacket.source (msg), hops_to_sink_through_sender, rssi_to_sender);
         }
       }
@@ -334,16 +333,18 @@ event message_t* BeaconReceive.receive(message_t* msg, void* payload, uint8_t le
 void createInfoBeacon(uint8_t child_address, uint8_t father_address)
 {
 	InfoBeacon* infoBeacon;
-	if(sending_info){
+	if (current_parent == TOS_NODE_ID) // we don't have a parent
+	    return;
+    if(sending_info){
 		infoBeaconToReschedule.childAddress =child_address;
 		infoBeaconToReschedule.parentAddress = father_address;
 		call InfoTimerRescheduling.startOneShot(call Random.rand16() % 	BEACON_INFO_RESCHEDULING);}
-	if (current_parent == TOS_NODE_ID) // we don't have a parent
-		return;
-	infoBeacon = call InfoToRootSend.getPayload(&info_output, sizeof(InfoBeacon));
-	infoBeacon->child = child_address;
-	infoBeacon->father = father_address;
-	sendInfoBeacon();
+    else{
+	    infoBeacon = call InfoToRootSend.getPayload(&info_output, sizeof(InfoBeacon));
+	    infoBeacon->child = child_address;
+	    infoBeacon->father = father_address;
+	    sendInfoBeacon();
+    }
 
 }
 
