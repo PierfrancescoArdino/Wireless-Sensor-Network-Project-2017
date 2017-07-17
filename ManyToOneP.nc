@@ -55,13 +55,12 @@ void send_data(CollectionData* payload_to_send) {
 		queuedPacket = payload;
 		sending_data = FALSE;
 		call RetryForwardingTimer.startOneShot(call Random.rand16() % RESCHEDULING_SEND);}
-		//TODO handle rescheduling
 }
 
 event void DataSend.sendDone(message_t* msg, error_t error) {
 	if(error != SUCCESS)
 	{
-		printf("[ERROR] DataSend sendDone failed, maybe we have to reschedule?\n");
+		printf("[ERROR] DataSend sendDone failed\n");
 	}
 	sending_data = FALSE;
 }
@@ -84,7 +83,7 @@ command void ManyToOne.send(MyData * d) {
 
 event message_t* DataReceive.receive(message_t* msg, void* payload, uint8_t len) {
 	CollectionData* payload_in = payload;
-	
+
 	if (i_am_sink) {
 		signal ManyToOne.receive(payload_in->from, &payload_in->data);
 	}
@@ -96,7 +95,7 @@ event message_t* DataReceive.receive(message_t* msg, void* payload, uint8_t len)
 		if (sending_data)
 		{
 			queuedPacket = payload_out;
-			call RetryForwardingTimer.startOneShot(call Random.rand16() % RESCHEDULING_SEND);		
+			call RetryForwardingTimer.startOneShot(call Random.rand16() % RESCHEDULING_SEND);
 		}
 		else{
 		sending_data = TRUE;
@@ -107,7 +106,6 @@ event message_t* DataReceive.receive(message_t* msg, void* payload, uint8_t len)
 }
 
 event void RetryForwardingTimer.fired() {
-	//TODO: call forwarding info to root
 	send_data(queuedPacket);
 
 }

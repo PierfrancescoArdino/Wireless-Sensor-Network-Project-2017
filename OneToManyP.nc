@@ -8,7 +8,7 @@ module OneToManyP {
 	uses {
 		interface Boot;
 		interface Routing;
-		
+
 		interface Random;
 		interface CC2420Packet;
 		interface LowPowerListening as LPL;
@@ -32,7 +32,7 @@ implementation
 	DataFromSink* queuedDestData;
 	bool sending_data;
 	void sendSinkData(DataFromSink* data);
-	
+
 	event void Boot.booted() {
 		call AMControl.start();
 		call LPL.setLocalWakeupInterval(LPL_DEF_REMOTE_WAKEUP);
@@ -78,16 +78,13 @@ implementation
 			printf("[ERROR] Something gone wrong with the payload creation \n");
   		destData -> finalDest = data -> finalDest;
   		destData -> data = data -> data;
-  //		destData -> destRoute = data -> destRoute;
   		memcpy(destData -> destRoute, data -> destRoute, sizeof(data->destRoute[0])*MAX_ROUTE_LENGTH);
-		//printf("[DEBUG] Forwarding target pakcet for %d to %d\n",netCollData -> finalDestination,netCollData -> route[0]);
 		call PacketLink.setRetries(&data_output, NUM_RETRIES);
   		status = call DataFromSinkSend.send(destData -> destRoute[0] , &data_output, sizeof(DataFromSink));
   		if(status != SUCCESS) {
-			printf("[ERROR] Send DataFromSink failed, retrying soon...\n");
+			printf("[ERROR] Send DataFromSink failed, rescheduling\n");
 			queuedDestData = data;
 			sending_data=FALSE;
-			//			queuedDestData->destRoute = data -> destRoute;
 			call RetryForwarding.startOneShot((call Random.rand16()) % RETRY_JITTER);
 		}
 		else
@@ -101,7 +98,7 @@ implementation
   	}
 
 	event void DataFromSinkSend.sendDone(message_t* msg, error_t error){
-		sending_data= FALSE;	
+		sending_data= FALSE;
 	}
 
 

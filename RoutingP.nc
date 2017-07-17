@@ -114,6 +114,7 @@ command uint8_t* Routing.getDestinationRoute(uint8_t destinationNode)
 	}while(currDest!=1);
 	i=hop-2;
 	j=0;
+    /* reverse the reversePath array, so the destination is in the last position*/
 	while(i>-1)
 	{
 		uint8_t temp;
@@ -194,8 +195,9 @@ void updateParent(uint16_t new_parent, uint16_t new_hops_to_sink, int new_rssi_t
     current_hops_to_sink=new_hops_to_sink;
     current_rssi_to_parent=new_rssi_to_parent;
    // printf("routing:NEW PARENT %u COST %u RSSI %d\n", current_parent, current_hops_to_sink, current_rssi_to_parent );
-    // Inform neighboring nodes after a random time
+    //send my parent to the root
     call InfoTimer.startOneShot(BEACON_INFO_TIME + (call Random.rand16()) % BEACON_INFO_RESCHEDULING);
+    // Inform neighboring nodes after a random time
 	call NotificationTimer.startOneShot(BEACON_REPEAT_PERIOD + (call Random.rand16())% BEACON_REPEAT_RESCHEDULING);
 }
 
@@ -361,7 +363,7 @@ void sendInfoBeacon()
 	if(status != SUCCESS)
 	{
 		sending_info = FALSE;
-		printf("ERROR CAN NOT SEND INFO BEACON WITH CHILD %d AND FATHER %d I'M %d RESCHEDULING\n", infoBeacon->child, infoBeacon->father, TOS_NODE_ID);
+		printf("[ERROR] Can not send InfoBeacon with child %d and father %d, rescheluding\n", infoBeacon->child, infoBeacon->father, TOS_NODE_ID);
 		infoBeaconToReschedule.childAddress = infoBeacon->child;
 		infoBeaconToReschedule.parentAddress = infoBeacon->father;
 		call InfoTimerRescheduling.startOneShot(call Random.rand16() % BEACON_INFO_RESCHEDULING);

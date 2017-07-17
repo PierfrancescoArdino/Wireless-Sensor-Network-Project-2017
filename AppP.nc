@@ -20,7 +20,7 @@ implementation
 #define JITTER2 (50*1024L)
 
 	MyData data;
-	
+
 	event void Boot.booted() {
 		call StartTimer.startOneShot(10*1024);
 	}
@@ -43,8 +43,6 @@ implementation
 	}
 
 	event void JitterTimer.fired() {
-		if(data.seqn<200)
-		{
 			if(TOS_NODE_ID == 1){
 				uint8_t destNode = call Routing.getRandomNode();
 				printf("app:Send to node %d seqn %d\n", destNode, data.seqn);
@@ -57,7 +55,6 @@ implementation
 				data.seqn++;
 
 			}
-		}
 	}
 	event void ManyToOne.receive(am_addr_t from, MyData* d) {
 		printf("app:Recv from %d seqn %d\n", from, d->seqn);
