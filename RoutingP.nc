@@ -363,7 +363,7 @@ void sendInfoBeacon()
 	if(status != SUCCESS)
 	{
 		sending_info = FALSE;
-		printf("[ERROR] Can not send InfoBeacon with child %d and father %d, rescheluding\n", infoBeacon->child, infoBeacon->father, TOS_NODE_ID);
+		printf("[ERROR] Can not send InfoBeacon with child %d and father %d, rescheluding\n", infoBeacon->child, infoBeacon->father);
 		infoBeaconToReschedule.childAddress = infoBeacon->child;
 		infoBeaconToReschedule.parentAddress = infoBeacon->father;
 		call InfoTimerRescheduling.startOneShot(call Random.rand16() % BEACON_INFO_RESCHEDULING);
